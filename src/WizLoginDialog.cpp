@@ -156,13 +156,26 @@ WizLoginDialog::WizLoginDialog(const QString &strLocale, const QList<WizLocalUse
     //
     connect(&m_wizBoxSearchingTimer, SIGNAL(timeout()), SLOT(onWizBoxSearchingTimeOut()));
 #ifndef Q_OS_MAC
+    
+    
+    // login button
     connect(m_buttonLogin, SIGNAL(clicked()), SLOT(on_btn_login_clicked()));
+    
+    
     connect(ui->btn_changeToLogin, SIGNAL(clicked()), SLOT(on_btn_changeToLogin_clicked()));
     connect(ui->btn_changeToSignin, SIGNAL(clicked()), SLOT(on_btn_changeToSignin_clicked()));
     connect(ui->btn_fogetpass, SIGNAL(clicked()), SLOT(on_btn_fogetpass_clicked()));
+    
+    
+    // register
     connect(ui->btn_singUp, SIGNAL(clicked()), SLOT(on_btn_singUp_clicked()));
+    
+    
     connect(ui->btn_proxysetting, SIGNAL(clicked()), SLOT(on_btn_proxysetting_clicked()));
+    
+    // auto login
     connect(ui->cbx_autologin, SIGNAL(toggled(bool)), SLOT(on_cbx_autologin_toggled(bool)));
+   
     connect(ui->cbx_remberPassword, SIGNAL(toggled(bool)), SLOT(on_cbx_remberPassword_toggled(bool)));
 #endif
 
@@ -362,7 +375,11 @@ void WizLoginDialog::doAccountVerify()
             break;
         }
     }
-
+    
+    
+    
+    // is user's setting folder isn't exist
+    // do online verify
     if (strAccountFolder.isEmpty())
     {
         emit accountCheckStart();
@@ -375,11 +392,20 @@ void WizLoginDialog::doAccountVerify()
 
 void WizLoginDialog::doOnlineVerify()
 {
+    // what is token ? secret password?
     WizToken::setUserId(userId());
     WizToken::setPasswd(password());
-
+    
+    
+    // bound golbal static class 's fucntion to dialog's 'onTokenAcquired' function
+    // know sender is the 'WizToken::instance()'
     connect(WizToken::instance(), SIGNAL(tokenAcquired(QString)), SLOT(onTokenAcquired(QString)), Qt::QueuedConnection);
+    
+    
+    // guess send to servier user and passwd to verify
     WizToken::requestToken();
+    
+    // this is very perfect loading form !
     showAnimationWaitingDialog(tr("Connecting..."));
 }
 
@@ -1076,7 +1102,10 @@ void WizLoginDialog::on_btn_login_clicked()
             WizCommonApiEntry::setEnterpriseServerIP(m_lineEditServer->text());
         }
     }
-
+    
+    
+    // Verify with server
+    
     doAccountVerify();
 }
 

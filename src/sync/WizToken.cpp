@@ -32,6 +32,8 @@ QString WizTokenPrivate::token()
     if (m_info.strToken.isEmpty())
     {
         WizKMAccountsServer asServer;
+        
+        // send json request to server 
         if (asServer.login(m_strUserId, m_strPasswd))
         {
             m_info = asServer.getUserInfo();
@@ -89,7 +91,7 @@ void WizTokenPrivate::requestToken()
         qDebug() << "Querying token...";
         return;
     }
-    //
+    // haha why define a class in the function ?  because 'WizExecuteOnThread' need run a funciton , lambda is too lang
     class GetTokenRunnable : public QObject
     {
         WizTokenPrivate* m_p;
@@ -102,11 +104,17 @@ void WizTokenPrivate::requestToken()
         void run()
         {
             m_p->m_bProcessing = true;
+            
+            // important !!!!
             QString token = m_p->token();
+            
+            
             m_p->m_bProcessing = false;
             Q_EMIT m_p->q->tokenAcquired(token);
         }
     };
+    
+    // it is  amazing !!! WIZ_THREAD_NETWORK i should realize
     WizExecuteOnThread(WIZ_THREAD_NETWORK, [=](){
         GetTokenRunnable runnable(this);
         runnable.run();
@@ -192,7 +200,8 @@ QString WizToken::token()
 void WizToken::requestToken()
 {
     Q_ASSERT(m_instance);
-
+    
+    // d is a private pointer  , Declare cycle before main's exit
     d->requestToken();
 }
 

@@ -236,7 +236,13 @@ int mainCore(int argc, char *argv[])
     // figure out auto login or manually login
     bool bFallback = true;
 
-    // FIXME: move to WizService initialize
+    
+    
+    
+    // global static object moved to main stack?? 
+    // and object's instance function return this object ?
+    // yeal !!! it's perfect 
+    // because it's deterministic destructor!!!
     WizToken token;
 
 

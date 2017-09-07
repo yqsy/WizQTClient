@@ -479,6 +479,9 @@ WIZKBVALUEVERSIONS WizKMAccountsServer::getValueVersions(QString kbGuid) const
 
 bool WizKMAccountsServer::login(const QString& strUserName, const QString& strPassword)
 {
+    // i think abstraction layer is needed.
+    // meta generate protocol class 
+    // 
     if (m_bLogin)
     {
         return TRUE;
@@ -486,8 +489,13 @@ bool WizKMAccountsServer::login(const QString& strUserName, const QString& strPa
     //
     QString urlPath = "/as/user/login";
     Json::Value params;
+    
     params["userId"] = strUserName.toStdString();
     params["password"] = strPassword.toStdString();
+    
+    /// ? but json looks not so bad
+    // besides json ? use abstraction layer
+    
     //
     m_bLogin = WithResult::execStandardJsonRequest<WIZUSERINFO>(*this, urlPath, m_userInfo, "POST", params);
     //
