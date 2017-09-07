@@ -1,4 +1,4 @@
-﻿#include "WizSearchWidget.h"
+#include "WizSearchWidget.h"
 
 #ifdef USECOCOATOOLBAR
 #include "mac/WizSearchWidget_mm.h"

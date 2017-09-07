@@ -1,4 +1,4 @@
-ï»¿#include "WizCellButton.h"
+#include "WizCellButton.h"
 
 #include <QString>
 #include <QPainter>
@@ -271,7 +271,7 @@ void WizRoundCellButton::paintEvent(QPaintEvent* /*event*/)
 
 QSize WizRoundCellButton::sizeHint() const
 {
-    //NTOE: è®¾ç½®ä¸€ä¸ªæœ€å¤§å®½åº¦ï¼Œå®žé™…å®½åº¦ç”±animationé€šè¿‡maxWidthè¿›è¡ŒæŽ§åˆ¶
+    //NTOE: ÉèÖÃÒ»¸ö×î´ó¿í¶È£¬Êµ¼Ê¿í¶ÈÓÉanimationÍ¨¹ýmaxWidth½øÐÐ¿ØÖÆ
     int maxWidth = 200;
     return QSize(maxWidth, RoundCellButtonConst::buttonHeight);
 }

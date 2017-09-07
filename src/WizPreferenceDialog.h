@@ -1,4 +1,4 @@
-﻿#ifndef WIZPREFERENCEDIALOG_H
+#ifndef WIZPREFERENCEDIALOG_H
 #define WIZPREFERENCEDIALOG_H
 
 #include <QDialog>

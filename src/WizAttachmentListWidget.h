@@ -1,4 +1,4 @@
-﻿#ifndef WIZATTACHMENTLISTWIDGET_H
+#ifndef WIZATTACHMENTLISTWIDGET_H
 #define WIZATTACHMENTLISTWIDGET_H
 
 #include "share/WizObject.h"

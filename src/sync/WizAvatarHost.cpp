@@ -1,4 +1,4 @@
-ï»¿#include "WizAvatarHost.h"
+#include "WizAvatarHost.h"
 #include "WizAvatarHost_p.h"
 
 #include <QThread>
@@ -389,7 +389,7 @@ void WizAvatarHostPrivate::on_downloaded(QString strUserID, bool bSucceed)
         Q_EMIT q->loaded(strUserID);        
     }
 
-    //  ä¸‹è½½åˆ—è¡¨ä¸­çš„ä¸‹ä¸€ä¸ªå¤´åƒ
+    //  ÏÂÔØÁĞ±íÖĞµÄÏÂÒ»¸öÍ·Ïñ
     m_currentDownloadingUser.userID.clear();
     download_impl();
 }

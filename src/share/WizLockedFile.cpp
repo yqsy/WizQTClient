@@ -1,4 +1,4 @@
-﻿#include "WizLockedFile.h"
+#include "WizLockedFile.h"
 #include <string.h>
 #include <errno.h>
 #ifdef Q_OS_WIN

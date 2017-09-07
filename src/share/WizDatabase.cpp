@@ -1,4 +1,4 @@
-ï»¿#include "WizDatabase.h"
+#include "WizDatabase.h"
 
 #include <QDir>
 #include <QUrl>
@@ -740,8 +740,8 @@ bool WizDatabase::onDownloadTagList(const CWizTagDataArray& arrayData)
     for (it = arrayData.begin(); it != arrayData.end(); it++) {
         WIZTAGDATA data(*it);
         data.strKbGUID = kbGUID();
-        //NOTE:å½“å‰åŒæ­¥æ•°æ®æ—¶ä¸ä¼šä»æœåŠ¡å™¨ä¸­ä¸‹è½½tagçš„positionæ•°æ®ã€‚
-        //å°†positionæ•°æ®ä¿ç•™ä¸ºåŸæœ¬çš„æ•°æ®ã€‚å¦‚æœåæœŸè§„åˆ™ä¿®æ”¹ï¼Œæ­¤å¤„éœ€è¦ä¿®æ”¹
+        //NOTE:µ±Ç°Í¬²½Êı¾İÊ±²»»á´Ó·şÎñÆ÷ÖĞÏÂÔØtagµÄpositionÊı¾İ¡£
+        //½«positionÊı¾İ±£ÁôÎªÔ­±¾µÄÊı¾İ¡£Èç¹ûºóÆÚ¹æÔòĞŞ¸Ä£¬´Ë´¦ĞèÒªĞŞ¸Ä
         WIZTAGDATA dataTemp;
         if (tagFromGuid(data.strGUID, dataTemp))
         {
@@ -2288,7 +2288,7 @@ bool WizDatabase::setAllBizInfo(const CWizBizDataArray& arrayBiz)
 {
     QMutexLocker locker(&m_mutexCache);
     //
-    //ä¸èƒ½ç›´æ¥ä½¿ç”¨æœåŠ¡å™¨çš„bizåˆ—è¡¨ï¼Œå› ä¸ºæœ‰ç©ºçš„ã€‚å¼ºåˆ¶å¤±æ•ˆï¼Œä»æœ¬åœ°é‡æ–°è·å–
+    //²»ÄÜÖ±½ÓÊ¹ÓÃ·şÎñÆ÷µÄbizÁĞ±í£¬ÒòÎªÓĞ¿ÕµÄ¡£Ç¿ÖÆÊ§Ğ§£¬´Ó±¾µØÖØĞÂ»ñÈ¡
     //m_cachedBizs = arrayBiz;
     m_cachedBizs.clear();
     //
@@ -2627,7 +2627,7 @@ QString WizDatabase::getDocumentOwnerAlias(const WIZDOCUMENTDATA& doc)
 
     QString strUserID = doc.strOwner;
 
-    //NOTE: ç”¨æˆ·å¯èƒ½ä½¿ç”¨æ‰‹æœºå·ç™»å½•ï¼Œæ­¤æ—¶ownerä¸ºæ‰‹æœºå·ï¼Œéœ€è¦ä½¿ç”¨æ˜µç§°
+    //NOTE: ÓÃ»§¿ÉÄÜÊ¹ÓÃÊÖ»úºÅµÇÂ¼£¬´ËÊ±ownerÎªÊÖ»úºÅ£¬ĞèÒªÊ¹ÓÃêÇ³Æ
     if (!strUserID.contains('@') && strUserID == personDb->getUserId())
     {
         personDb->getUserDisplayName(strUserID);
@@ -2934,7 +2934,7 @@ bool WizDatabase::updateDocument(const WIZDOCUMENTDATAEX& d)
     if (documentFromGuid(data.strGUID, dataTemp)) {
         if (dataTemp.nVersion == -1)
         {
-            if (dataTemp.nDataChanged) //æœ¬åœ°æ•°æ®è¢«ä¿®æ”¹äº†ï¼Œåˆ™ä¸è¦†ç›–
+            if (dataTemp.nDataChanged) //±¾µØÊı¾İ±»ĞŞ¸ÄÁË£¬Ôò²»¸²¸Ç
             {
                 qDebug() << "local data changed, skip to overwrite: " << data.strTitle;
                 return true;
@@ -3160,7 +3160,7 @@ bool WizDatabase::updateDocumentData(WIZDOCUMENTDATA& data,
     }
     m_mtxTempFile.unlock();
     //
-    //å¦‚æœåŒæ—¶ä¿å­˜å¤šä¸ªæ•°æ®ï¼Œæœ‰å¯èƒ½å¯¼è‡´è¾ƒæ—©çš„ç¬”è®°ä¿å­˜å°†æ–°å‡çš„å›¾ç‰‡åˆ é™¤ã€‚å› æ­¤æš‚æ—¶ç¦æ­¢è¿™ä¸ªåŠŸèƒ½ï¼Œç­‰ä»¥åæœ‰å¥½çš„åŠæ³•ã€‚
+    //Èç¹ûÍ¬Ê±±£´æ¶à¸öÊı¾İ£¬ÓĞ¿ÉÄÜµ¼ÖÂ½ÏÔçµÄ±Ê¼Ç±£´æ½«ĞÂ¼ÙµÄÍ¼Æ¬É¾³ı¡£Òò´ËÔİÊ±½ûÖ¹Õâ¸ö¹¦ÄÜ£¬µÈÒÔºóÓĞºÃµÄ°ì·¨¡£
     //removeUnusedImages(strProcessedHtml, strResourcePath);
 
     if (isEncryptAllData())
@@ -4026,8 +4026,8 @@ bool WizDatabase::updateDocumentAbstract(const QString& strDocumentGUID)
             qint64 size = Utils::WizMisc::getFileSize(strFileName);
             if (size > m)
             {
-                //FIXME:æ­¤å¤„æ˜¯ç‰¹æ®Šå¤„ç†ï¼Œè§£æHtmlçš„CSSæ—¶å€™å­˜åœ¨é—®é¢˜ï¼Œç›®å‰æš‚ä¸åˆ é™¤å†—ä½™å›¾ç‰‡ã€‚
-                //ç¼©ç•¥å›¾éœ€è¦åˆ¤æ–­å½“å‰å›¾ç‰‡ç¡®å®è¢«ä½¿ç”¨
+                //FIXME:´Ë´¦ÊÇÌØÊâ´¦Àí£¬½âÎöHtmlµÄCSSÊ±ºò´æÔÚÎÊÌâ£¬Ä¿Ç°Ôİ²»É¾³ıÈßÓàÍ¼Æ¬¡£
+                //ËõÂÔÍ¼ĞèÒªÅĞ¶Ïµ±Ç°Í¼Æ¬È·Êµ±»Ê¹ÓÃ
                 QString strName = Utils::WizMisc::extractFileName(strFileName);
                 if (!strHtml.contains(strName))
                     continue;
@@ -4066,7 +4066,7 @@ bool WizDatabase::updateDocumentAbstract(const QString& strDocumentGUID)
 
 CString WizDatabase::getRootLocation(const CString& strLocation)
 {
-    //FIXME:å®¹é”™å¤„ç†ï¼Œå¦‚æœè·¯å¾„çš„ç»“å°¾ä¸æ˜¯ '/'ï¼Œåˆ™å¢åŠ è¯¥ç»“å°¾ç¬¦å·
+    //FIXME:Èİ´í´¦Àí£¬Èç¹ûÂ·¾¶µÄ½áÎ²²»ÊÇ '/'£¬ÔòÔö¼Ó¸Ã½áÎ²·ûºÅ
     QString strLoc = strLocation;
     if (strLoc.right(1) != "/")
         strLoc.append('/');
@@ -4080,7 +4080,7 @@ CString WizDatabase::getRootLocation(const CString& strLocation)
 
 CString WizDatabase::getLocationName(const CString& strLocation)
 {
-    //FIXME:å®¹é”™å¤„ç†ï¼Œå¦‚æœè·¯å¾„çš„ç»“å°¾ä¸æ˜¯ '/'ï¼Œåˆ™å¢åŠ è¯¥ç»“å°¾ç¬¦å·
+    //FIXME:Èİ´í´¦Àí£¬Èç¹ûÂ·¾¶µÄ½áÎ²²»ÊÇ '/'£¬ÔòÔö¼Ó¸Ã½áÎ²·ûºÅ
     QString strLoc = strLocation;
     if (strLoc.right(1) != "/")
         strLoc.append('/');
@@ -4290,7 +4290,7 @@ bool WizDatabase::documentToHtmlFile(const WIZDOCUMENTDATA& document,
     QMutexLocker locker(&m_mtxTempFile);
     //
     //
-    //é¿å…ç¼–è¾‘çš„æ—¶å€™ä¸´æ—¶æ–‡ä»¶è¢«åˆ é™¤å¯¼è‡´å›¾ç‰‡ç­‰ä¸¢å¤±
+    //±ÜÃâ±à¼­µÄÊ±ºòÁÙÊ±ÎÄ¼ş±»É¾³ıµ¼ÖÂÍ¼Æ¬µÈ¶ªÊ§
     //::WizDeleteAllFilesInFolder(strPath);
     ::WizEnsurePathExists(strPath);
     if (!extractZiwFileToFolder(document, strPath))
@@ -4417,8 +4417,8 @@ bool WizDatabase::compressFolderToZiwFile(WIZDOCUMENTDATA& document, const QStri
 
     setObjectDataDownloaded(document.strGUID, "document", true);
 
-    /*ä¸éœ€è¦å°†ç¬”è®°modifiedä¿¡æ¯é€šçŸ¥å…³è”å†…å®¹.æ­¤å‰é¡µé¢æ˜¾ç¤ºå·²æ˜¯æœ€æ–°,ä¸éœ€è¦relaod.å¦‚æœrelaodè¾ƒå¤§ç¬”è®°
-    å¯èƒ½ä¼šé€ æˆé¡µé¢é—ªçƒ*/
+    /*²»ĞèÒª½«±Ê¼ÇmodifiedĞÅÏ¢Í¨Öª¹ØÁªÄÚÈİ.´ËÇ°Ò³ÃæÏÔÊ¾ÒÑÊÇ×îĞÂ,²»ĞèÒªrelaod.Èç¹ûrelaod½Ï´ó±Ê¼Ç
+    ¿ÉÄÜ»áÔì³ÉÒ³ÃæÉÁË¸*/
     bool notify = false;
     return updateDocumentDataMD5(document, strZiwFileName, notify);
 }

@@ -1,4 +1,4 @@
-ï»¿#include "WizDocumentStyle.h"
+#include "WizDocumentStyle.h"
 #include "WizDatabase.h"
 #include "WizDatabaseManager.h"
 #include "../utils/WizLogger.h"
@@ -57,7 +57,7 @@ WIZSTYLEDATA WizDocumentStyle::getStyle(QString styleGuid)
     if (styleGuid.isEmpty())
         return WIZSTYLEDATA();
     return WIZSTYLEDATA();
-    //æš‚æ—¶ä¸å¼€å¯æ ·å¼åŠŸèƒ½
+    //ÔÝÊ±²»¿ªÆôÑùÊ½¹¦ÄÜ
     //return m_data->getStyle(styleGuid);
 }
 

@@ -1,4 +1,4 @@
-﻿#include "WizFolderSelector.h"
+#include "WizFolderSelector.h"
 
 #include <QVBoxLayout>
 #include <QDialogButtonBox>

@@ -1,4 +1,4 @@
-ï»¿#include <QtGlobal>
+#include <QtGlobal>
 #include <QApplication>
 #include <QTreeWidget>
 #include <QMessageBox>
@@ -176,7 +176,7 @@ int mainCore(int argc, char *argv[])
 
     WizQueuedThreadsInit();
 
-    //FIXME: åœ¨Mac osxå®‰å…¨æ›´æ–°ä¹‹åå­˜åœ¨sslæ¡æ‰‹é—®é¢˜ï¼Œæ­¤å¤„è¿›è¡Œç‰¹æ®Šå¤„ç†
+    //FIXME: ÔÚMac osx°²È«¸üĞÂÖ®ºó´æÔÚsslÎÕÊÖÎÊÌâ£¬´Ë´¦½øĞĞÌØÊâ´¦Àí
     QSslConfiguration conf = QSslConfiguration::defaultConfiguration();
     conf.setPeerVerifyMode(QSslSocket::VerifyNone);
     QSslConfiguration::setDefaultConfiguration(conf);

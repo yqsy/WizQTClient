@@ -1,4 +1,4 @@
-ï»¿#ifndef WIZKMXMLRPC_H
+#ifndef WIZKMXMLRPC_H
 #define WIZKMXMLRPC_H
 
 #include "share/WizMessageBox.h"
@@ -17,7 +17,7 @@ struct IWizKMSyncEvents;
 #define WIZKM_XMLRPC_ERROR_VIP_SERVICE_EXPR     30322
 
 
-//è¿”å›çš„ç½‘ç»œé”™è¯¯ã€‚ æ­¤å¤„ä½¿ç”¨å®¢æˆ·ç«¯è‡ªå®šä¹‰çš„é”™è¯¯ä»£ç 
+//·µ»ØµÄÍøÂç´íÎó¡£ ´Ë´¦Ê¹ÓÃ¿Í»§¶Ë×Ô¶¨ÒåµÄ´íÎó´úÂë
 #define WIZKM_XMLRPC_ERROR_INVALID_TOKEN		301
 #define WIZKM_XMLRPC_ERROR_INVALID_USER			31001
 #define WIZKM_XMLRPC_ERROR_INVALID_PASSWORD		31002
@@ -220,7 +220,7 @@ public:
 
     //
     /////////////////////////////////////////////////////
-    ////è·å¾—æ‰€æœ‰çš„å¯¹è±¡åˆ—è¡¨//
+    ////»ñµÃËùÓĞµÄ¶ÔÏóÁĞ±í//
     //
     template <class TData>
     bool getList(int nCountPerPage, __int64 nVersion, std::deque<TData>& arrayRet)

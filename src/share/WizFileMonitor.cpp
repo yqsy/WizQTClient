@@ -1,4 +1,4 @@
-﻿#include "WizFileMonitor.h"
+#include "WizFileMonitor.h"
 #include "WizMisc.h"
 #include "../utils/WizLogger.h"
 #include <QFileInfo>

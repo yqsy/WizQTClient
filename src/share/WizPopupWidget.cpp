@@ -1,4 +1,4 @@
-﻿#include "WizPopupWidget.h"
+#include "WizPopupWidget.h"
 
 #include <QtGui>
 

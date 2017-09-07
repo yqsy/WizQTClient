@@ -1,4 +1,4 @@
-ï»¿#include "WizDocumentListView.h"
+#include "WizDocumentListView.h"
 
 #include <QPixmapCache>
 #include <QApplication>
@@ -406,7 +406,7 @@ void WizDocumentListView::addDocument(const WIZDOCUMENTDATAEX& doc)
 
 bool WizDocumentListView::acceptDocumentChange(const WIZDOCUMENTDATA& document)
 {
-    //  æœç´¢æ¨¡å¼ä¸‹å±è”½å› åŒæ­¥å¸¦æ¥çš„ç¬”è®°æ–°å¢å’Œä¿®æ”¹
+    //  ËÑË÷Ä£Ê½ÏÂÆÁ±ÎÒòÍ¬²½´øÀ´µÄ±Ê¼ÇĞÂÔöºÍĞŞ¸Ä
     if (m_accpetAllSearchItems)
     {
         if (documentIndexFromGUID(document.strGUID) == -1)
@@ -417,7 +417,7 @@ bool WizDocumentListView::acceptDocumentChange(const WIZDOCUMENTDATA& document)
 }
 bool WizDocumentListView::acceptDocumentChange(const QString &documentGuid)
 {
-    //  æœç´¢æ¨¡å¼ä¸‹å±è”½å› åŒæ­¥å¸¦æ¥çš„ç¬”è®°æ–°å¢å’Œä¿®æ”¹
+    //  ËÑË÷Ä£Ê½ÏÂÆÁ±ÎÒòÍ¬²½´øÀ´µÄ±Ê¼ÇĞÂÔöºÍĞŞ¸Ä
     if (m_accpetAllSearchItems)
     {
         if (documentIndexFromGUID(documentGuid) == -1)

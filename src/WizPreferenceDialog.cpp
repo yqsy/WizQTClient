@@ -1,4 +1,4 @@
-﻿#include "WizPreferenceDialog.h"
+#include "WizPreferenceDialog.h"
 #include "ui_WizPreferenceDialog.h"
 
 #include <QMessageBox>

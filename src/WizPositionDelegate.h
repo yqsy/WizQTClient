@@ -1,4 +1,4 @@
-О╩©#ifndef CWIZPOSITIONDELEGATE_H
+#ifndef CWIZPOSITIONDELEGATE_H
 #define CWIZPOSITIONDELEGATE_H
 
 #include <QObject>
@@ -13,7 +13,7 @@ class WizPositionDelegate : public QObject
 public:
     static WizPositionDelegate& instance()
     {
-        static WizPositionDelegate _instance;   //Е╠─И┐╗И²≥Ф─│Е▐≤И┤▐
+        static WizPositionDelegate _instance;   //╬ж╡©╬╡л╛╠Да©
         return _instance;
     }
 

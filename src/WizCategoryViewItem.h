@@ -1,4 +1,4 @@
-﻿#ifndef WIZCATEGORYVIEWITEM_H
+#ifndef WIZCATEGORYVIEWITEM_H
 #define WIZCATEGORYVIEWITEM_H
 
 #include <QTreeWidgetItem>

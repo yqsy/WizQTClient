@@ -1,4 +1,4 @@
-﻿#ifndef WIZUSERCIPHERFORM_H
+#ifndef WIZUSERCIPHERFORM_H
 #define WIZUSERCIPHERFORM_H
 
 #include <QWidget>

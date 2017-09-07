@@ -1,4 +1,4 @@
-﻿#ifndef CORE_ICORE_H
+#ifndef CORE_ICORE_H
 #define CORE_ICORE_H
 
 #include <QObject>

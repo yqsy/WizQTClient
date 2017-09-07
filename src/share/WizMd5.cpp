@@ -1,4 +1,4 @@
-﻿#include "WizMd5.h"
+#include "WizMd5.h"
 
 #include <stdexcept>
 #include <QFile>

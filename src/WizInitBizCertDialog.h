@@ -1,4 +1,4 @@
-﻿#ifndef INITBIZCERTDIALOG_H
+#ifndef INITBIZCERTDIALOG_H
 #define INITBIZCERTDIALOG_H
 
 #include <QDialog>

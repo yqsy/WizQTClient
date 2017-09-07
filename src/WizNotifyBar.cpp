@@ -1,4 +1,4 @@
-ï»¿#include "WizNotifyBar.h"
+#include "WizNotifyBar.h"
 
 #include <QHBoxLayout>
 #include <QLabel>
@@ -25,7 +25,7 @@ WizNotifyBar::WizNotifyBar(QWidget *parent)
     m_spacer->setText(QString());
     layout->addWidget(m_spacer);
 
-    //Q_OBJECTæ ‡å¿—ä¸Žstylesheetä¸èƒ½å…±å­˜ï¼Œåˆ›å»ºä¸€ä¸ªå­Widgetæ¥è°ƒæ•´æ ·å¼
+    //Q_OBJECT±êÖ¾Óëstylesheet²»ÄÜ¹²´æ£¬´´½¨Ò»¸ö×ÓWidgetÀ´µ÷ÕûÑùÊ½
     QHBoxLayout* childLayout = new QHBoxLayout();
     childLayout->setContentsMargins(12, 5, 12, 5);    // On most platforms, the margin is 11 pixels in all directions.
     childLayout->setSpacing(15);

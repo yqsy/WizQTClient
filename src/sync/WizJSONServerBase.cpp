@@ -1,4 +1,4 @@
-﻿#include "WizJSONServerBase.h"
+#include "WizJSONServerBase.h"
 #include "share/WizEventLoop.h"
 #include "share/jsoncpp/json/json.h"
 #include <QDebug>

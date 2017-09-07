@@ -1,4 +1,4 @@
-ï»¿#include "WizDocumentListViewItem.h"
+#include "WizDocumentListViewItem.h"
 
 #include <QFile>
 #include <QFileInfo>
@@ -69,7 +69,7 @@ bool WizDocumentListViewDocumentItem::isAvatarNeedUpdate(const QString& strFileN
 
 bool WizDocumentListViewDocumentItem::isContainsAttachment() const
 {
-    //NOTE:ä¸åº”è¯¥ä»Žæ•°æ®ä¸­è¯»å–é™„ä»¶ä¿¡æ¯ï¼Œè€Œæ˜¯æ ¹æ®å½“å‰åŒ…å«çš„ç¬”è®°ä¿¡æ¯æ¥åˆ¤æ–­ã€‚å¦‚æžœå‘çŽ°ç¬”è®°ä¿¡æ¯ä¸Žå®žé™…æƒ…å†µä¸ä¸€è‡´ï¼Œåˆ™é—®é¢˜åœ¨ç¬”è®°ä¿¡æ¯åˆ·æ–°çš„éƒ¨åˆ†ã€‚
+    //NOTE:²»Ó¦¸Ã´ÓÊý¾ÝÖÐ¶ÁÈ¡¸½¼þÐÅÏ¢£¬¶øÊÇ¸ù¾Ýµ±Ç°°üº¬µÄ±Ê¼ÇÐÅÏ¢À´ÅÐ¶Ï¡£Èç¹û·¢ÏÖ±Ê¼ÇÐÅÏ¢ÓëÊµ¼ÊÇé¿ö²»Ò»ÖÂ£¬ÔòÎÊÌâÔÚ±Ê¼ÇÐÅÏ¢Ë¢ÐÂµÄ²¿·Ö¡£
     return m_data.doc.nAttachmentCount > 0;
 }
 
@@ -124,7 +124,7 @@ bool WizDocumentListViewDocumentItem::compareWithSectionItem(const WizDocumentLi
 //        qDebug() << "compare doc and sec 1, loc : " << m_data.location << "  other loc : " << secItem->sectionData().strInfo << "result : " << result;
 //        return result;
 //    }
-        //æ–‡ä»¶å¤¹æŽ’åºæ—¶å­æ–‡ä»¶å¤¹æŽ’åœ¨çˆ¶æ–‡ä»¶å¤¹çš„åŽé¢
+        //ÎÄ¼þ¼ÐÅÅÐòÊ±×ÓÎÄ¼þ¼ÐÅÅÔÚ¸¸ÎÄ¼þ¼ÐµÄºóÃæ
     case SortingByLocation:
     case -SortingByLocation:
     {
@@ -434,7 +434,7 @@ bool WizDocumentListViewDocumentItem::operator <(const QListWidgetItem &other) c
 //        qDebug() << "compare doc and doc 1, loc : " << m_data.location << "  other loc : " << pOther->documentLocation() << "result : " << result;
 //        return result;
 //    }
-        //NOTE: ç¬”è®°å®‰è£…è·¯å¾„æŽ’åºæ—¶ï¼Œå­ç›®å½•çš„ç¬”è®°æ°¸è¿œæŽ’åœ¨çˆ¶ç›®å½•çš„åŽé¢
+        //NOTE: ±Ê¼Ç°²×°Â·¾¶ÅÅÐòÊ±£¬×ÓÄ¿Â¼µÄ±Ê¼ÇÓÀÔ¶ÅÅÔÚ¸¸Ä¿Â¼µÄºóÃæ
     case SortingByLocation:
     case -SortingByLocation:
     {
@@ -708,7 +708,7 @@ void WizDocumentListViewDocumentItem::drawSyncStatus(QPainter* p, const QStyleOp
     strIconPath = ::WizGetSkinResourcePath(m_app.userSettings().skin());
     //
     bool attachModified = false;
-    /*  //å½±å“æ˜¾ç¤ºæ•ˆçŽ‡
+    /*  //Ó°ÏìÏÔÊ¾Ð§ÂÊ
     CWizDocumentAttachmentDataArray arrayAttachment;
     db.getDocumentAttachments(m_data.doc.strGUID, arrayAttachment);
     for (WIZDOCUMENTATTACHMENTDATAEX attachment : arrayAttachment)
@@ -827,7 +827,7 @@ bool WizDocumentListViewSectionItem::operator<(const QListWidgetItem& other) con
         }
         case -SortingByTitle:
         case -SortingByLocation:
-        case SortingByLocation:     //NOTE: æŒ‰æ–‡ä»¶å¤¹æŽ’åºç›®å‰åªæä¾›ä¸€ç§æŽ’åºæ–¹å‘ï¼Œé™åºæŽ’åˆ—éœ€è¦é‡æ–°æ•´ç†ç®—æ³•
+        case SortingByLocation:     //NOTE: °´ÎÄ¼þ¼ÐÅÅÐòÄ¿Ç°Ö»Ìá¹©Ò»ÖÖÅÅÐò·½Ïò£¬½µÐòÅÅÁÐÐèÒªÖØÐÂÕûÀíËã·¨
         {
 //            if (m_data.strInfo.startsWith(secItem->sectionData().strInfo) &&
 //                    m_data.strInfo.length() > secItem->sectionData().strInfo.length())
@@ -916,7 +916,7 @@ bool WizDocumentListViewSectionItem::compareWithDocumentItem(const WizDocumentLi
 //        qDebug() << "compare sec and doc 1.2 , loc : " << m_data.strInfo << "  other loc : " << docItem->documentLocation() << "result : " << result;
 //        return result;
 //    }
-        //æŒ‰ç…§è·¯å¾„æŽ’åºçš„æ—¶å€™å­æ–‡ä»¶å¤¹æŽ’åœ¨çˆ¶æ–‡ä»¶å¤¹çš„åŽé¢
+        //°´ÕÕÂ·¾¶ÅÅÐòµÄÊ±ºò×ÓÎÄ¼þ¼ÐÅÅÔÚ¸¸ÎÄ¼þ¼ÐµÄºóÃæ
     case SortingByLocation:
     case -SortingByLocation:
     {

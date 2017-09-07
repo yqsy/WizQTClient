@@ -1,4 +1,4 @@
-﻿#ifndef WIZMACICON_H
+#ifndef WIZMACICON_H
 #define WIZMACICON_H
 
 #if 0

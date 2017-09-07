@@ -1,4 +1,4 @@
-﻿#include "WizDocumentTransitionView.h"
+#include "WizDocumentTransitionView.h"
 
 #include <QLabel>
 #include <QVBoxLayout>

@@ -1,4 +1,4 @@
-﻿#include "WizXmlRpc.h"
+#include "WizXmlRpc.h"
 
 #include <QUrl>
 

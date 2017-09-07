@@ -1,4 +1,4 @@
-﻿#ifndef WIZNOTESTYLE_H
+#ifndef WIZNOTESTYLE_H
 #define WIZNOTESTYLE_H
 
 #include <QString>

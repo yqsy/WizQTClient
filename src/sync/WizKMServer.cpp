@@ -1,4 +1,4 @@
-﻿#include "WizKMServer.h"
+#include "WizKMServer.h"
 #include "WizApiEntry.h"
 #include "WizToken.h"
 #include "WizXmlRpcServer.h"

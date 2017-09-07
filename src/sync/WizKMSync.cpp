@@ -1,4 +1,4 @@
-ï»¿#include "WizKMSync.h"
+#include "WizKMSync.h"
 
 #include <QDebug>
 #include <QApplication>
@@ -475,7 +475,7 @@ void WizKMSyncThread::addQuickSyncKb(const QString& kbGuid)
 
 void WizKMSyncThread::quickDownloadMesages()
 {
-    // ä¸€åˆ†é’Ÿä¸­å†…ä¸é‡å¤æŸ¥è¯¢ï¼Œé˜²æ­¢è¿‡äºé¢‘ç¹çš„è¯·æ±‚
+    // Ò»·ÖÖÓÖĞÄÚ²»ÖØ¸´²éÑ¯£¬·ÀÖ¹¹ıÓÚÆµ·±µÄÇëÇó
     static QTime time = QTime::currentTime().addSecs(-61);
     if (time.secsTo(QTime::currentTime()) < 60)
         return;

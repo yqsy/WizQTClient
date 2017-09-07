@@ -1,4 +1,4 @@
-﻿#ifndef WIZOBJECT_H
+#ifndef WIZOBJECT_H
 #define WIZOBJECT_H
 
 #include <QMetaType>
@@ -596,7 +596,7 @@ const int WIZ_USER_MSG_TYPE_LIKE = 60;
 const int WIZ_USER_MSG_TYPE_REMIND = 90;
 const int WIZ_USER_MSG_TYPE_SYSTEM = 100;
 const int WIZ_USER_MSG_TYPE_REMIND_CREATE = 110;
-const int WIZ_USER_MSG_TYPE_MAX = 110;      //支持的最大消息类型，超过该类型的消息直接丢弃
+const int WIZ_USER_MSG_TYPE_MAX = 110;      //֧�ֵ������Ϣ���ͣ����������͵���Ϣֱ�Ӷ���
 
 
 struct WIZMESSAGEDATA

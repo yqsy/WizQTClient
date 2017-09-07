@@ -1,4 +1,4 @@
-﻿#ifndef WIZFILEMONITOR_H
+#ifndef WIZFILEMONITOR_H
 #define WIZFILEMONITOR_H
 
 #include <QThread>

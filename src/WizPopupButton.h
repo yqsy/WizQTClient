@@ -1,4 +1,4 @@
-﻿#ifndef WIZPOPUPBUTTON_H
+#ifndef WIZPOPUPBUTTON_H
 #define WIZPOPUPBUTTON_H
 
 #include <QToolButton>

@@ -1,4 +1,4 @@
-﻿#include "WizXmlRpcServer.h"
+#include "WizXmlRpcServer.h"
 #include <QEventLoop>
 #include <QNetworkReply>
 #include <QNetworkProxy>

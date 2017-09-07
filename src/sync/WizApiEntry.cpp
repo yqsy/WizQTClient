@@ -1,4 +1,4 @@
-ï»¿#include "WizApiEntry.h"
+#include "WizApiEntry.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -142,7 +142,7 @@ QString WizCommonApiEntry::syncUrl()
 
 QString WizCommonApiEntry::asServerUrl()
 {
-    //ä½¿ç”¨endpointsè·å–asä½¿ç”¨çš„APIåœ°å€å’Œä¹‹å‰çš„ä¸åŒ
+    //Ê¹ÓÃendpoints»ñÈ¡asÊ¹ÓÃµÄAPIµØÖ·ºÍÖ®Ç°µÄ²»Í¬
     QString strAsUrl = getUrlFromCache("wizas");
 
     if (strAsUrl.isEmpty())
@@ -222,7 +222,7 @@ QString WizCommonApiEntry::avatarUploadUrl()
 
 QString WizCommonApiEntry::mailShareUrl(const QString& strKUrl, const QString& strMailInfo)
 {
-    // é€šè¿‡endpointsè·å¾—apiå‘½ä»¤ä¸ºmail_shareï¼Œå’Œä¹‹å‰ä½¿ç”¨çš„mail_share2ä¸åŒï¼Œéœ€è¦åˆ†å¼€å¤„ç†
+    // Í¨¹ıendpoints»ñµÃapiÃüÁîÎªmail_share£¬ºÍÖ®Ç°Ê¹ÓÃµÄmail_share2²»Í¬£¬ĞèÒª·Ö¿ª´¦Àí
     QString strMailShare = getUrlFromCache("mail_share");
     if (strMailShare.isEmpty())
     {
@@ -231,7 +231,7 @@ QString WizCommonApiEntry::mailShareUrl(const QString& strKUrl, const QString& s
     }
 
     QString strKSServer = strKUrl;
-    //NOTE: æ–°ç‰ˆæœåŠ¡å™¨ä¿®æ”¹äº†è·å–æ–¹æ³•ï¼Œéœ€è¦è‡ªè¡Œå°†KUrlä¸­çš„/xmlrpcç§»é™¤
+    //NOTE: ĞÂ°æ·şÎñÆ÷ĞŞ¸ÄÁË»ñÈ¡·½·¨£¬ĞèÒª×ÔĞĞ½«KUrlÖĞµÄ/xmlrpcÒÆ³ı
     strKSServer.remove("/xmlrpc");
     strMailShare.replace("{server_url}", strKSServer);
     strMailShare.append(strMailInfo);
@@ -268,7 +268,7 @@ QString WizCommonApiEntry::captchaUrl(const QString& strCaptchaID, int nWidth, i
 
 QString WizCommonApiEntry::editStatusUrl()
 {
-    //ä½¿ç”¨endpointsè·å–editä½¿ç”¨çš„APIåœ°å€å’Œä¹‹å‰çš„ä¸åŒ
+    //Ê¹ÓÃendpoints»ñÈ¡editÊ¹ÓÃµÄAPIµØÖ·ºÍÖ®Ç°µÄ²»Í¬
     QString strUrl = getUrlFromCache("edit_status");
     
     if (strUrl.isEmpty())

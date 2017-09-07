@@ -1,4 +1,4 @@
-﻿#ifndef WIZINDEX_H
+#ifndef WIZINDEX_H
 #define WIZINDEX_H
 
 #include <map>

@@ -1,4 +1,4 @@
-﻿#include "WizToken.h"
+#include "WizToken.h"
 #include "WizToken_p.h"
 
 #include <QMutexLocker>

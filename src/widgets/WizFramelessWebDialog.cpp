@@ -1,4 +1,4 @@
-﻿#include "WizFramelessWebDialog.h"
+#include "WizFramelessWebDialog.h"
 #include <QVBoxLayout>
 #include <QDesktopServices>
 #include <QWebEnginePage>

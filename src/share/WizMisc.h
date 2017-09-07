@@ -1,4 +1,4 @@
-﻿#ifndef WIZMISC_H
+#ifndef WIZMISC_H
 #define WIZMISC_H
 
 #include <stdint.h>

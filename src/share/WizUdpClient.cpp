@@ -1,4 +1,4 @@
-﻿#include "WizUdpClient.h"
+#include "WizUdpClient.h"
 #include <QNetworkInterface>
 #include <QNetworkAddressEntry>
 #include <QUdpSocket>

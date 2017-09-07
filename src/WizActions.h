@@ -1,4 +1,4 @@
-﻿#ifndef WIZACTIONS_H
+#ifndef WIZACTIONS_H
 #define WIZACTIONS_H
 
 #include "WizDef.h"
@@ -75,8 +75,8 @@ class QShortcut;
 #define WIZDOCUMENT_SORTBY_SIZE                                 "actionSortBySize"
 
 /**
-//NOTE：因为Linux版本没有menubar，qaction在隐藏后快捷键无法触发，此处创建一个shortcut并与app的槽函数绑定
-//作为程序的全局快捷键，禁用qaction时同时禁用shortcut
+//NOTE����ΪLinux�汾û��menubar��qaction�����غ��ݼ��޷��������˴�����һ��shortcut����app�Ĳۺ�����
+//��Ϊ�����ȫ�ֿ�ݼ�������qactionʱͬʱ����shortcut
 **/
 class WizShortcutAction : public QAction
 {

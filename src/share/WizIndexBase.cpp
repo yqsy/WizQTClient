@@ -1,4 +1,4 @@
-﻿#include "WizIndexBase.h"
+#include "WizIndexBase.h"
 #include "WizDef.h"
 
 #include <QDebug>

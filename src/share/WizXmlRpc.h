@@ -1,4 +1,4 @@
-﻿#ifndef WIZXMLRPC_H
+#ifndef WIZXMLRPC_H
 #define WIZXMLRPC_H
 
 #include "WizXml.h"

@@ -1,4 +1,4 @@
-﻿#ifndef CWIZCUSTOMTOOLBAR_H
+#ifndef CWIZCUSTOMTOOLBAR_H
 #define CWIZCUSTOMTOOLBAR_H
 
 #include <QWidget>

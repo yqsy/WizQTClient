@@ -1,4 +1,4 @@
-﻿#ifndef CORE_WIZDOCUMENTVIEW_H
+#ifndef CORE_WIZDOCUMENTVIEW_H
 #define CORE_WIZDOCUMENTVIEW_H
 
 #include "share/WizObject.h"

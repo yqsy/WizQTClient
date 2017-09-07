@@ -1,4 +1,4 @@
-﻿#include "WizLogger.h"
+#include "WizLogger.h"
 
 #include <QString>
 #include <QStringList>

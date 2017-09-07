@@ -1,4 +1,4 @@
-﻿#ifndef THUMBCACHE_P_H
+#ifndef THUMBCACHE_P_H
 #define THUMBCACHE_P_H
 
 #include <QObject>

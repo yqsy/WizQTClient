@@ -1,4 +1,4 @@
-ï»¿#include "WizCategoryViewItem.h"
+#include "WizCategoryViewItem.h"
 
 #include <QTextCodec>
 #include <QPainter>
@@ -80,7 +80,7 @@ void WizCategoryViewItemBase::drawItemBody(QPainter *p, const QStyleOptionViewIt
     QFont fontCount;
     Utils::WizStyleHelper::fontExtend(fontCount);
 
-    //é€šè¿‡subElementRectè·å–èŒƒå›´ä¼šäº§ç”Ÿä¸åŒçš„ç»“æœã€‚æ­¤å¤„é€šè¿‡iconè¿›è¡Œè®¡ç®—
+    //Í¨¹ısubElementRect»ñÈ¡·¶Î§»á²úÉú²»Í¬µÄ½á¹û¡£´Ë´¦Í¨¹ıicon½øĞĞ¼ÆËã
 //    QRect rcText = subElementRect(SE_ItemViewItemText, vopt, view);
     QRect rcText(rcIcon.right() + 8, vopt->rect.top(), vopt->rect.right() - rcIcon.right() - 20,
                  vopt->rect.height());
@@ -2199,7 +2199,7 @@ bool WizCategoryViewShortcutItem::accept(WizDatabase& db, const WIZDOCUMENTDATA&
 {
     switch (m_type) {
     case Document:
-        //ç°åœ¨ç¬”è®°åˆ—è¡¨ä¼šæ˜¾ç¤ºå¿«æ·æ–¹å¼ä¸­ç¬”è®°æ‰€åœ¨æ–‡ä»¶å¤¹çš„æ‰€æœ‰ç¬”è®°ï¼Œæ‰€ä»¥å…è®¸è¯¥æ–‡ä»¶å¤¹ä¸‹æ‰€æœ‰ç¬”è®°
+        //ÏÖÔÚ±Ê¼ÇÁĞ±í»áÏÔÊ¾¿ì½İ·½Ê½ÖĞ±Ê¼ÇËùÔÚÎÄ¼ş¼ĞµÄËùÓĞ±Ê¼Ç£¬ËùÒÔÔÊĞí¸ÃÎÄ¼ş¼ĞÏÂËùÓĞ±Ê¼Ç
     {
         if(db.isGroup())
         {

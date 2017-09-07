@@ -1,4 +1,4 @@
-﻿#ifndef WIZUPGRADE_H
+#ifndef WIZUPGRADE_H
 #define WIZUPGRADE_H
 
 #include <QtNetwork>

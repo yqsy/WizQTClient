@@ -1,4 +1,4 @@
-ï»¿#include "WizCategoryView.h"
+#include "WizCategoryView.h"
 
 #include <QHeaderView>
 #include <QAction>
@@ -348,7 +348,7 @@ void WizCategoryBaseView::dragMoveEvent(QDragMoveEvent *event)
     m_dragHoveredPos = event->pos();
 
 #ifdef Q_OS_MAC
-    //osx10.11ç³»ç»Ÿä¸Šè‡ªåŠ¨æ»šåŠ¨å­˜åœ¨é—®é¢˜ï¼Œé€šè¿‡åˆ¤æ–­è¿›è¡Œå¼ºåˆ¶æ»šåŠ¨
+    //osx10.11ÏµÍ³ÉÏ×Ô¶¯¹ö¶¯´æÔÚÎÊÌâ£¬Í¨¹ıÅĞ¶Ï½øĞĞÇ¿ÖÆ¹ö¶¯
     static bool isEiCapitan = (getSystemMinorVersion() >= 11);
     if (isEiCapitan)
     {
@@ -3839,7 +3839,7 @@ bool WizCategoryView::getAvailableNewNoteTagAndLocation(QString& strKbGUID, WIZT
             {
                 strKbGUID = pItem->kbGUID();
                 WizDatabase& db = m_dbMgr.db(strKbGUID);
-                //å¦‚æœæ˜¯ç¾¤ç»„ç¬”è®°ï¼Œåˆ™åœ¨è¯¥ç¬”è®°ç›®å½•ä¸‹åˆ›å»ºæ–°ç¬”è®°
+                //Èç¹ûÊÇÈº×é±Ê¼Ç£¬ÔòÔÚ¸Ã±Ê¼ÇÄ¿Â¼ÏÂ´´½¨ĞÂ±Ê¼Ç
                 if (db.isGroup())
                 {
                     CWizTagDataArray arrayTag;
@@ -3883,7 +3883,7 @@ bool WizCategoryView::getAvailableNewNoteTagAndLocation(QString& strKbGUID, WIZT
 void WizCategoryView::quickSyncNewDocument(const QString& strKbGUID)
 {
     /*NOTE:
-     *åˆ›å»ºç¬”è®°åå¿«é€ŸåŒæ­¥ç¬”è®°åˆ°æœåŠ¡å™¨,é˜²æ­¢ç”¨æˆ·æ–°å»ºç¬”è®°åä½¿ç”¨è¯„è®ºåŠŸèƒ½æ—¶å› æœåŠ¡å™¨æ— è¯¥ç¯‡ç¬”è®°å¯¼è‡´é—®é¢˜.*/
+     *´´½¨±Ê¼Çºó¿ìËÙÍ¬²½±Ê¼Çµ½·şÎñÆ÷,·ÀÖ¹ÓÃ»§ĞÂ½¨±Ê¼ÇºóÊ¹ÓÃÆÀÂÛ¹¦ÄÜÊ±Òò·şÎñÆ÷ÎŞ¸ÃÆª±Ê¼Çµ¼ÖÂÎÊÌâ.*/
     WizMainWindow* mainWindow = qobject_cast<WizMainWindow*>(m_app.mainWindow());
     mainWindow->quickSyncKb(strKbGUID);
 }
@@ -3965,7 +3965,7 @@ void WizCategoryView::updatePersonalFolderLocation(WizDatabase& db, \
         }
     }
 
-    // æ–‡ä»¶å¤¹ç§»åŠ¨åè§¦å‘folder loacation changedï¼Œéœ€è¦æ›´æ–°é¡ºåº
+    // ÎÄ¼ş¼ĞÒÆ¶¯ºó´¥·¢folder loacation changed£¬ĞèÒª¸üĞÂË³Ğò
     QString str = getAllFoldersPosition();
     db.setFoldersPos(str, -1);
     db.setFoldersPosModified();

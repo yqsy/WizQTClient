@@ -1,4 +1,4 @@
-ï»¿#include "WizHtmlReader.h"
+#include "WizHtmlReader.h"
 #include "share/WizMisc.h"
 
 #include <QChar>
@@ -959,9 +959,9 @@ inline BOOL IsRegExpBegin(const unsigned short* pBegin, const unsigned short* p)
     //
     if (ch != _T('/'))
         return FALSE;
-    if (*(p + 1) == _T('/'))		//è¡Œæ³¨é‡Š
+    if (*(p + 1) == _T('/'))		//ÐÐ×¢ÊÍ
         return FALSE;
-    if (*(p + 1) == _T('*'))		//å¿«æ³¨é‡Š
+    if (*(p + 1) == _T('*'))		//¿ì×¢ÊÍ
         return FALSE;
     //
     p--;
@@ -973,11 +973,11 @@ inline BOOL IsRegExpBegin(const unsigned short* pBegin, const unsigned short* p)
             p--;
             continue;
         }
-        if (ch >= _T('a') && ch <= _T('z'))	//é™¤å·
+        if (ch >= _T('a') && ch <= _T('z'))	//³ýºÅ
             return FALSE;
-        if (ch >= _T('A') && ch <= _T('Z'))	//é™¤å·
+        if (ch >= _T('A') && ch <= _T('Z'))	//³ýºÅ
             return FALSE;
-        if (ch == _T(')')) //é™¤å·
+        if (ch == _T(')')) //³ýºÅ
             return FALSE;
         //
         if (ch == '=')
@@ -1085,7 +1085,7 @@ const unsigned short* GetScriptSource(const unsigned short* lpszUnparsed, CStrin
         if (bVB)
         {//vbscript
             if (*p == _T('"'))
-            {//VBscript, javascriptçš„å¼•ç”¨
+            {//VBscript, javascriptµÄÒýÓÃ
                 p++;
                 int nQuotCount = 1;
                 while (*p)
@@ -1106,7 +1106,7 @@ const unsigned short* GetScriptSource(const unsigned short* lpszUnparsed, CStrin
                 }
             }
             else if (*p == _T('\''))
-            {//vbscript æ³¨é‡Š
+            {//vbscript ×¢ÊÍ
                 p++;
                 while (*p && *p != _T('\n') && *p != _T('\r'))
                 {
@@ -1122,13 +1122,13 @@ const unsigned short* GetScriptSource(const unsigned short* lpszUnparsed, CStrin
                 p = FindRegExpEnd(p);
             }
             else if (IsJavascriptQuotBegin(p))
-            {//javascriptçš„å¼•ç”¨
+            {//javascriptµÄÒýÓÃ
                 const unsigned short ch = *p;
                 p++;
                 p = WizHTMLFindEndOfQuotInBlockScriptSource(p, ch);
             }
             else if (*p == _T('/') && *(p + 1) == _T('/'))
-            {//javascriptçš„è¡Œæ³¨é‡Š
+            {//javascriptµÄÐÐ×¢ÊÍ
                 p += 2;
                 const unsigned short* lpszCommentsBegin = p;
                 while (*p && *p != _T('\n') && *p != _T('\r'))
@@ -1144,14 +1144,14 @@ const unsigned short* GetScriptSource(const unsigned short* lpszUnparsed, CStrin
                     }
                     else if (p[0] && p[1] && p[2] && p[3] && p[4] && p[5] && p[6] && p[7] && wiz_strnicmp(p, "</script", 8) == 0)
                     {
-                        p--;	//è·³å‡ºè¡Œæ³¨é‡Šå°¾éƒ¨ï¼Œå› ä¸ºæœ€åŽæœ‰ä¸€ä¸ªp++ï¼Œæ‰€ä»¥éœ€è¦å…ˆå‡1ã€‚
+                        p--;	//Ìø³öÐÐ×¢ÊÍÎ²²¿£¬ÒòÎª×îºóÓÐÒ»¸öp++£¬ËùÒÔÐèÒªÏÈ¼õ1¡£
                         break;
                     }
                     p++;
                 }
             }
             else if (*p == _T('/') && *(p + 1) == _T('*'))
-            {//javascriptçš„å—æ³¨é‡Š
+            {//javascriptµÄ¿é×¢ÊÍ
                 p += 2;
                 while (*p && !(*p == _T('*') && *(p + 1) == _T('/')))
                 {
@@ -1248,7 +1248,7 @@ UINT WizHtmlTag::parseFromStr(const unsigned short* lpszString,
 
     bOpeningTag = !bClosingTag;
     lpszEnd = lpszBegin;
-    do                 // å¾ªçŽ¯è¯»å–æ ‡ç­¾ä¸­çš„å†…å®¹ï¼Œé‡åˆ°ç©ºæ ¼ç­‰è·³å‡ºï¼Œæå–å¹¶ä¿å­˜æ ‡ç­¾çš„ç±»åž‹åç§°
+    do                 // Ñ­»·¶ÁÈ¡±êÇ©ÖÐµÄÄÚÈÝ£¬Óöµ½¿Õ¸ñµÈÌø³ö£¬ÌáÈ¡²¢±£´æ±êÇ©µÄÀàÐÍÃû³Æ
     {
         // tag name may contain letters (a-z, A-Z), digits (0-9),
         // underscores '_', hyphen '-', colons ':', and periods '.'

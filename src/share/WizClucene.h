@@ -1,4 +1,4 @@
-﻿#ifndef WIZCLUCENE_H
+#ifndef WIZCLUCENE_H
 #define WIZCLUCENE_H
 
 #include <QtGlobal>

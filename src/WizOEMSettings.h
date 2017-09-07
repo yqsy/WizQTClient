@@ -1,4 +1,4 @@
-ï»¿#ifndef CWIZOEMSETTINGS_H
+#ifndef CWIZOEMSETTINGS_H
 #define CWIZOEMSETTINGS_H
 
 #include <QSettings>
@@ -19,8 +19,8 @@ public:
     bool isEncryptPassword();
     bool isHideSocialLogin();
     bool isHideForgotPassword();
-    bool isHideShare();                         //éšè—æ‰€æœ‰åˆ†äº«åˆ°å¤–éƒ¨æ–¹å¼
-    bool isAccountPlaceholder();            //ç™»å½•æ¡†æ˜¾ç¤ºçš„åŸŸè´¦å·
+    bool isHideShare();                         //Òş²ØËùÓĞ·ÖÏíµ½Íâ²¿·½Ê½
+    bool isAccountPlaceholder();            //µÇÂ¼¿òÏÔÊ¾µÄÓòÕËºÅ
     bool isHideMyShare();
     bool isHideBuyVip();
     bool isForbidCreateBiz();

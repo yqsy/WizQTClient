@@ -1,4 +1,4 @@
-﻿#include "WizSearch.h"
+#include "WizSearch.h"
 
 #include <QFile>
 #include <QMetaType>

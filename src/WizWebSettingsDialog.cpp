@@ -1,4 +1,4 @@
-ï»¿#include "WizWebSettingsDialog.h"
+#include "WizWebSettingsDialog.h"
 #include "sync/WizToken.h"
 #include "WizMainWindow.h"
 #include "share/WizGlobal.h"
@@ -67,7 +67,7 @@ void WizWebSettingsDialog::on_web_loaded(bool ok)
     }
     else
     {
-        //å¤±è´¥çš„æ—¶å€™ä¼šé€ æˆæ­»å¾ªçŽ¯
+        //Ê§°ÜµÄÊ±ºò»áÔì³ÉËÀÑ­»·
         //loadErrorPage();
     }
 }
@@ -83,7 +83,7 @@ void WizWebSettingsDialog::loadErrorPage()
 
 void WizWebSettingsDialog::on_networkRequest_finished(QNetworkReply* reply)
 {
-    // å³ä½¿åœ¨è¿žæŽ¥æ­£å¸¸æƒ…å†µä¸‹ä¹Ÿä¼šå‡ºçŽ°OperationCanceledErrorï¼Œæ­¤å¤„å°†å…¶å¿½ç•¥
+    // ¼´Ê¹ÔÚÁ¬½ÓÕý³£Çé¿öÏÂÒ²»á³öÏÖOperationCanceledError£¬´Ë´¦½«ÆäºöÂÔ
     if (reply && reply->error() != QNetworkReply::NoError && reply->error() != QNetworkReply::OperationCanceledError)
     {
         showError();

@@ -1,4 +1,4 @@
-ï»¿#include "WizEmailShareDialog.h"
+#include "WizEmailShareDialog.h"
 #include "ui_WizEmailShareDialog.h"
 #include <QListWidget>
 #include <QNetworkAccessManager>
@@ -24,13 +24,13 @@
 
 enum returnCode {
     codeOK = 200,                   //:ok,
-    codeErrorParam = 322,      //:å‚æ•°é”™è¯¯ï¼Œ
-    codeErrorFrequent = 429,    //è¯·æ±‚è¶…å‡ºé¢‘ç‡é™åˆ¶ï¼
-    codeErrorFile = 3330,         //: ç¬”è®°ä¸å­˜åœ¨ï¼Œ
-    codeErrorSize = 3370,        //:é‚®ä»¶å¤§å°è¶…å‡ºå°ºå¯¸ï¼Œ
-    codeErrorEncrypt = 3371,   //:åŠ å¯†ç¬”è®°æ— æ³•åˆ†äº«ï¼Œ
-    codeErrorEmail = 3372,      //ï¼šé‚®ç®±æœªéªŒè¯ï¼Œæ— æ³•å‘é€åˆ†äº«é‚®ä»¶ï¼Œ
-    codeErrorServer = 500           //:æœåŠ¡å™¨é”™è¯¯
+    codeErrorParam = 322,      //:²ÎÊı´íÎó£¬
+    codeErrorFrequent = 429,    //ÇëÇó³¬³öÆµÂÊÏŞÖÆ£¡
+    codeErrorFile = 3330,         //: ±Ê¼Ç²»´æÔÚ£¬
+    codeErrorSize = 3370,        //:ÓÊ¼ş´óĞ¡³¬³ö³ß´ç£¬
+    codeErrorEncrypt = 3371,   //:¼ÓÃÜ±Ê¼ÇÎŞ·¨·ÖÏí£¬
+    codeErrorEmail = 3372,      //£ºÓÊÏäÎ´ÑéÖ¤£¬ÎŞ·¨·¢ËÍ·ÖÏíÓÊ¼ş£¬
+    codeErrorServer = 500           //:·şÎñÆ÷´íÎó
 };
 
 WizEmailShareDialog::WizEmailShareDialog(WizExplorerApp& app, QWidget *parent)
@@ -112,10 +112,10 @@ QString WizEmailShareDialog::getExInfo()
 //    kb_guid
 //    document_guid
 //    token
-//    mail_to            æ”¶ä»¶äººï¼Œæ ‡å‡†çš„é‚®ç®±æ ¼å¼ `"name" <xxx@xxx.com>` æˆ–è€… `xxx@xxx.com`,å¯ä»¥æŒ‡å®šå¤šä¸ªæ”¶ä»¶äºº
-//    subject            nullable, é‚®ä»¶ä¸»é¢˜ï¼Œå¦‚æœä¸ºç©ºï¼Œåˆ™å–ç¬”è®°æ ‡é¢˜
-//    cc_to_self         nullable, æ˜¯å¦æŠ„é€è‡ªå·±ï¼Œ, å­—ç¬¦ä¸²çš„ true or false, é»˜è®¤false
-//    reply_to           nullable, å¯ä¸ºç©ºï¼Œä¸ä¸ºç©ºæ—¶è¦æ±‚ä¸ºæ ‡å‡†æ ¼å¼
+//    mail_to            ÊÕ¼şÈË£¬±ê×¼µÄÓÊÏä¸ñÊ½ `"name" <xxx@xxx.com>` »òÕß `xxx@xxx.com`,¿ÉÒÔÖ¸¶¨¶à¸öÊÕ¼şÈË
+//    subject            nullable, ÓÊ¼şÖ÷Ìâ£¬Èç¹ûÎª¿Õ£¬ÔòÈ¡±Ê¼Ç±êÌâ
+//    cc_to_self         nullable, ÊÇ·ñ³­ËÍ×Ô¼º£¬, ×Ö·û´®µÄ true or false, Ä¬ÈÏfalse
+//    reply_to           nullable, ¿ÉÎª¿Õ£¬²»Îª¿ÕÊ±ÒªÇóÎª±ê×¼¸ñÊ½
 //    note
 //    api_version        4
 

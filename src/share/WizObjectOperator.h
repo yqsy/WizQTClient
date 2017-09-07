@@ -1,4 +1,4 @@
-﻿#ifndef CWIZOBJECTOPERATOR_H
+#ifndef CWIZOBJECTOPERATOR_H
 #define CWIZOBJECTOPERATOR_H
 
 #include <QObject>

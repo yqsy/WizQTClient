@@ -1,4 +1,4 @@
-﻿#include "WizOEMSettings.h"
+#include "WizOEMSettings.h"
 #include <QVariant>
 #include <QFile>
 #include <QDebug>

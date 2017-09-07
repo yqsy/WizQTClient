@@ -1,4 +1,4 @@
-﻿#include "WizTrayIcon.h"
+#include "WizTrayIcon.h"
 #include <QApplication>
 #include <QWidget>
 #include <QDebug>

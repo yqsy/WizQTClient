@@ -1,4 +1,4 @@
-﻿#ifndef WIZENC_H
+#ifndef WIZENC_H
 #define WIZENC_H
 
 #include "cryptopp/aes.h"

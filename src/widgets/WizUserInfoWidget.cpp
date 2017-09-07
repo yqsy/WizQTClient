@@ -1,4 +1,4 @@
-ï»¿#include <QtGlobal>
+#include <QtGlobal>
 #include "WizUserInfoWidget.h"
 #include <QMenu>
 #include <QFileDialog>
@@ -143,7 +143,7 @@ void WizUserInfoWidget::on_action_accountSettings_triggered()
     dlg->exec();
 #endif
     //
-    //// ç”¨æˆ·å¯èƒ½ä¼šåœ¨è®¾ç½®é¡µé¢ä¸­ä¿®æ”¹ä¿¡æ¯ï¼Œæ­¤å¤„æ¸…é™¤tokenä»¥ä¾¿é‡æ–°åŒæ­¥
+    //// ÓÃ»§¿ÉÄÜ»áÔÚÉèÖÃÒ³ÃæÖĞĞŞ¸ÄĞÅÏ¢£¬´Ë´¦Çå³ıtokenÒÔ±ãÖØĞÂÍ¬²½
     //
     WizToken::clearToken();
 }

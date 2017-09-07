@@ -1,4 +1,4 @@
-ï»¿#include "WizSearchWidget_mm.h"
+#include "WizSearchWidget_mm.h"
 
 #ifdef USECOCOATOOLBAR
 
@@ -376,7 +376,7 @@ void WizSuggestCompletionon::textChanged(QString text)
     {
         //updatePlaceHolder();
         //
-        //ä¸´æ—¶ç¦æ­¢æœç´¢å»ºè®®ï¼Œå› ä¸ºæœç´¢å»ºè®®ä¼šé®ä½è¾“å…¥æ³•é€‰æ‹©æ¡†ï¼šby wsj//
+        //ÁÙÊ±½ûÖ¹ËÑË÷½¨Òé£¬ÒòÎªËÑË÷½¨Òé»áÕÚ×¡ÊäÈë·¨Ñ¡Ôñ¿ò£ºby wsj//
         //searchTitleFromDB(db, inputText, suggestions);
     }
 }
@@ -389,7 +389,7 @@ void WizSuggestCompletionon::textFocused(bool focused)
 }
 
 /*
- * å› ä¸ºpopup widgetä¼šæŠŠimeè¾“å…¥æ¡†éšè—æ‰ï¼Œå› æ­¤æš‚æ—¶éšè—æœç´¢å»ºè®®
+ * ÒòÎªpopup widget»á°ÑimeÊäÈë¿òÒş²Øµô£¬Òò´ËÔİÊ±Òş²ØËÑË÷½¨Òé
  * */
 
 void WizSuggestCompletionon::startEditing()

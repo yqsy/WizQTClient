@@ -1,4 +1,4 @@
-﻿#ifndef WIZIOHOSTTHREAD_H
+#ifndef WIZIOHOSTTHREAD_H
 #define WIZIOHOSTTHREAD_H
 
 #include <iostream>

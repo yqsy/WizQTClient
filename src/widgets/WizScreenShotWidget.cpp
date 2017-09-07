@@ -1,4 +1,4 @@
-ï»¿#include "WizScreenShotWidget.h"
+#include "WizScreenShotWidget.h"
 #include <QMenu>
 #include <QApplication>
 #include <QDesktopWidget>
@@ -330,22 +330,22 @@ void WizScreenShotWidget::checkMoveEndPoint()
     y = moveEndPoint.y() - moveBeginPoint.y();
 
     if (x + selectedRect.x() < 0)
-    { //å½“ç§»åŠ¨åXåæ ‡å°äºé›¶æ—¶ï¼Œåˆ™å‡ºç°é€‰åŒºä¸¢å¤±ï¼Œåˆ™è®¡ç®—å‡ºmoveEndPointçš„Xæœ€å¤§åæ ‡å€¼ï¼Œè¿›è¡Œèµ‹å€¼
+    { //µ±ÒÆ¶¯ºóX×ø±êĞ¡ÓÚÁãÊ±£¬Ôò³öÏÖÑ¡Çø¶ªÊ§£¬Ôò¼ÆËã³ömoveEndPointµÄX×î´ó×ø±êÖµ£¬½øĞĞ¸³Öµ
         moveEndPoint.setX(qAbs(selectedRect.x() - moveBeginPoint.x()));
     }
 
     if (y + selectedRect.y() < 0)
-    { //å½“ç§»åŠ¨åYåæ ‡å°äºé›¶æ—¶ï¼Œåˆ™å‡ºç°é€‰åŒºä¸¢å¤±ï¼Œåˆ™è®¡ç®—å‡ºmoveEndPointçš„Yæœ€å¤§åæ ‡å€¼ï¼Œè¿›è¡Œèµ‹å€¼
+    { //µ±ÒÆ¶¯ºóY×ø±êĞ¡ÓÚÁãÊ±£¬Ôò³öÏÖÑ¡Çø¶ªÊ§£¬Ôò¼ÆËã³ömoveEndPointµÄY×î´ó×ø±êÖµ£¬½øĞĞ¸³Öµ
         moveEndPoint.setY(qAbs(selectedRect.y() - moveBeginPoint.y()));
     }
 
     if (x + bottomRightPoint.x() > screenwidth)
-    { //å½“ç§»åŠ¨é€‰åŒºåï¼Œå‡ºç°è¶…å‡ºæ•´ä¸ªå±å¹•çš„å³é¢æ—¶ï¼Œè®¾ç½®moveEndPointçš„Xçš„æœ€å¤§åæ ‡
+    { //µ±ÒÆ¶¯Ñ¡Çøºó£¬³öÏÖ³¬³öÕû¸öÆÁÄ»µÄÓÒÃæÊ±£¬ÉèÖÃmoveEndPointµÄXµÄ×î´ó×ø±ê
         moveEndPoint.setX(screenwidth - bottomRightPoint.x() + moveBeginPoint.x());
     }
 
     if (y + bottomRightPoint.y() > screenheight)
-    { //å½“ç§»åŠ¨é€‰åŒºåï¼Œå‡ºç°è¶…å‡ºæ•´ä¸ªå±å¹•çš„ä¸‹é¢æ—¶ï¼Œè®¾ç½®moveEndPointçš„Yçš„æœ€å¤§åæ ‡å€¼
+    { //µ±ÒÆ¶¯Ñ¡Çøºó£¬³öÏÖ³¬³öÕû¸öÆÁÄ»µÄÏÂÃæÊ±£¬ÉèÖÃmoveEndPointµÄYµÄ×î´ó×ø±êÖµ
         moveEndPoint.setY(screenheight - bottomRightPoint.y() + moveBeginPoint.y());
     }
 }

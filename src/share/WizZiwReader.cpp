@@ -1,4 +1,4 @@
-﻿#include "WizZiwReader.h"
+#include "WizZiwReader.h"
 
 #include <QDataStream>
 #include <QFile>

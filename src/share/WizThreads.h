@@ -1,4 +1,4 @@
-﻿#ifndef WIZTHREADS_H
+#ifndef WIZTHREADS_H
 #define WIZTHREADS_H
 
 #include <QObject>

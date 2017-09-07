@@ -1,4 +1,4 @@
-ï»¿#include "WizSingleDocumentView.h"
+#include "WizSingleDocumentView.h"
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QAction>
@@ -253,7 +253,7 @@ void WizSingleDocumentViewDelegate::onDocumentViewerDeleted(QString guid)
 
 void bindESCToQuitFullScreen(QWidget* wgt)
 {
-    //ESCé”®é€€å‡ºå…¨å±
+    //ESC¼üÍË³öÈ«ÆÁ
 #ifdef Q_OS_MAC
     QAction* action = new QAction(wgt);
     action->setShortcut(QKeySequence(Qt::Key_Escape));

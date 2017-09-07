@@ -1,4 +1,4 @@
-﻿#ifndef CWIZSHARELINKDIALOG_H
+#ifndef CWIZSHARELINKDIALOG_H
 #define CWIZSHARELINKDIALOG_H
 
 #include <QDialog>

@@ -1,4 +1,4 @@
-﻿#ifndef WIZSYNCABLEDATABASE_H
+#ifndef WIZSYNCABLEDATABASE_H
 #define WIZSYNCABLEDATABASE_H
 
 #include "WizObject.h"

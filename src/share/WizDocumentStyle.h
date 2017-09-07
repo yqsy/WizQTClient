@@ -1,4 +1,4 @@
-﻿#ifndef WIZDOCUMENTSTYLE_H
+#ifndef WIZDOCUMENTSTYLE_H
 #define WIZDOCUMENTSTYLE_H
 
 #include "WizObject.h"

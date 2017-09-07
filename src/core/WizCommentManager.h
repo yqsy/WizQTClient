@@ -1,4 +1,4 @@
-ï»¿#ifndef CWIZCOMMENTDOWNLOADER_H
+#ifndef CWIZCOMMENTDOWNLOADER_H
 #define CWIZCOMMENTDOWNLOADER_H
 
 #include <QObject>
@@ -7,7 +7,7 @@
 #include <QMutex>
 
 /*
- *  ä¸ºé˜²æ­¢å¿«é€Ÿåˆ‡æ¢ç¬”è®°æ—¶åˆ›å»ºå¤§é‡è¯„è®ºæ•°ç›®æŸ¥è¯¢å¸¦æ¥çš„é—®é¢˜ï¼ŒèŽ·å–è¯„è®ºæ•°ç›®çš„è¯·æ±‚ä¼šå»¶è¿Ÿæ‰§è¡Œ
+ *  Îª·ÀÖ¹¿ìËÙÇÐ»»±Ê¼ÇÊ±´´½¨´óÁ¿ÆÀÂÛÊýÄ¿²éÑ¯´øÀ´µÄÎÊÌâ£¬»ñÈ¡ÆÀÂÛÊýÄ¿µÄÇëÇó»áÑÓ³ÙÖ´ÐÐ
  */
 
 

@@ -1,4 +1,4 @@
-ï»¿#include "WizAttachmentListWidget.h"
+#include "WizAttachmentListWidget.h"
 
 #include <QBoxLayout>
 #include <QFile>
@@ -396,7 +396,7 @@ bool WizAttachmentListView::isAttachmentModified(const WIZDOCUMENTATTACHMENTDATA
 {
     return false;
     //
-    //ä¸‹é¢çš„æ–¹å¼æ˜¯é”™è¯¯çš„ï¼Œä¸åº”è¯¥æŒ‰ç…§è¿™ç§æ–¹å¼æ£€æµ‹ï¼Œè€Œåº”è¯¥æ£€æµ‹æ–‡ä»¶çš„md5ã€‚
+    //ÏÂÃæµÄ·½Ê½ÊÇ´íÎóµÄ£¬²»Ó¦¸Ã°´ÕÕÕâÖÖ·½Ê½¼ì²â£¬¶øÓ¦¸Ã¼ì²âÎÄ¼şµÄmd5¡£
     //
     QString fileNmae = m_dbMgr.db(attachment.strKbGUID).getAttachmentFileName(attachment.strGUID);
     QFileInfo info(fileNmae);

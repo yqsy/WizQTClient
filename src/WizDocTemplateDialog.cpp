@@ -1,4 +1,4 @@
-ï»¿#include "WizDocTemplateDialog.h"
+#include "WizDocTemplateDialog.h"
 #include "ui_WizDocTemplateDialog.h"
 
 #include <QFile>
@@ -30,8 +30,8 @@
 #include "WizMainWindow.h"
 
 /*
- * æœåŠ¡å™¨çš„æ¨¡æ¿åˆ—è¡¨ä¼šåœ¨æœ¬åœ°ç¼“å­˜ä¸€ä»½ï¼Œå…è®¸ç”¨æˆ·ç¦»çº¿çŠ¶å†µä¸‹ä½¿ç”¨
- * æ¯æ¬¡æ‰“å¼€è¯¥çª—å£æ—¶éƒ½ä¼šä»æœåŠ¡å™¨è·å–ä¸€æ¬¡åˆ—è¡¨
+ * ·şÎñÆ÷µÄÄ£°åÁĞ±í»áÔÚ±¾µØ»º´æÒ»·İ£¬ÔÊĞíÓÃ»§ÀëÏß×´¿öÏÂÊ¹ÓÃ
+ * Ã¿´Î´ò¿ª¸Ã´°¿ÚÊ±¶¼»á´Ó·şÎñÆ÷»ñÈ¡Ò»´ÎÁĞ±í
 */
 
 
@@ -75,7 +75,7 @@ WizDocTemplateDialog::~WizDocTemplateDialog()
 
 bool getGenericTemplateData(QList<TemplateData>& tmplList)
 {
-    // å†…ç½®çš„ç©ºç™½æ¨¡æ¿
+    // ÄÚÖÃµÄ¿Õ°×Ä£°å
     TemplateData tmplEmpty;
     tmplEmpty.type = CustomTemplate;
     tmplEmpty.strFileName = Utils::WizPathResolve::resourcesPath() + "templates/generic/newnote.ziw";
@@ -84,7 +84,7 @@ bool getGenericTemplateData(QList<TemplateData>& tmplList)
     tmplEmpty.isFree = true;
     tmplList.append(tmplEmpty);
     //
-    // å†…ç½®çš„markdownæ¨¡æ¿
+    // ÄÚÖÃµÄmarkdownÄ£°å
     TemplateData tmplMarkdown;
     tmplMarkdown.type = CustomTemplate;
     tmplMarkdown.strFileName = Utils::WizPathResolve::resourcesPath() + "templates/generic/markdown.md.ziw";
@@ -201,10 +201,10 @@ bool isTemplateUsable(const TemplateData& tmplData, WizDatabaseManager& dbMgr)
     if (WizServerTemplate != tmplData.type || tmplData.isFree)
         return true;
 
-    //å¼€æ”¾ç»™æ‰€æœ‰ç”¨æˆ·ä½¿ç”¨
+    //¿ª·Å¸øËùÓĞÓÃ»§Ê¹ÓÃ
     return true;
     //
-    //ä¸å†é™åˆ¶ç”¨æˆ·ä½¿ç”¨æ¨¡ç‰ˆ
+    //²»ÔÙÏŞÖÆÓÃ»§Ê¹ÓÃÄ£°æ
     /*
     WizAccountManager account(dbMgr);
     if (account.isVip())
@@ -558,10 +558,10 @@ void TemplateData::fromQVariant(const QVariant& var)
     strDemoUrl = varMap.value("demo").toString();
 }
 
-//è·å–æ¨¡æ¿åˆ—è¡¨ï¼Œç”¨äºä¸»çª—å£çš„æ–°å»ºç¬”è®°æŒ‰é’®å¿«é€Ÿåˆ›å»ºç¬”è®°
+//»ñÈ¡Ä£°åÁĞ±í£¬ÓÃÓÚÖ÷´°¿ÚµÄĞÂ½¨±Ê¼Ç°´Å¥¿ìËÙ´´½¨±Ê¼Ç
 bool getTemplateListFroNewNoteMenu(QList<TemplateData>& tmplList)
 {
-    // å†…ç½®çš„ç©ºç™½æ¨¡æ¿
+    // ÄÚÖÃµÄ¿Õ°×Ä£°å
     TemplateData tmplEmpty;
     tmplEmpty.type = CustomTemplate;
     tmplEmpty.strFileName = Utils::WizPathResolve::resourcesPath() + "templates/generic/newnote.ziw";
@@ -570,7 +570,7 @@ bool getTemplateListFroNewNoteMenu(QList<TemplateData>& tmplList)
     tmplEmpty.isFree = true;
     tmplList.append(tmplEmpty);
     //
-    // å†…ç½®çš„markdownæ¨¡æ¿
+    // ÄÚÖÃµÄmarkdownÄ£°å
     TemplateData tmplMarkdown;
     tmplMarkdown.type = CustomTemplate;
     tmplMarkdown.strFileName = Utils::WizPathResolve::resourcesPath() + "templates/generic/markdown.md.ziw";
@@ -588,7 +588,7 @@ bool getTemplateListFroNewNoteMenu(QList<TemplateData>& tmplList)
     tmplSep.isFree = true;
     tmplList.append(tmplSep);
 
-    // é€šè¿‡æœåŠ¡å™¨ä¸‹è½½çš„ç¬”è®°æ¨¡æ¿
+    // Í¨¹ı·şÎñÆ÷ÏÂÔØµÄ±Ê¼ÇÄ£°å
     QString jsonFile = Utils::WizPathResolve::wizTemplateJsonFilePath();
     if (QFile::exists(jsonFile))
     {

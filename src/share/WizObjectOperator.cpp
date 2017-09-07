@@ -1,4 +1,4 @@
-ï»¿#include "WizObjectOperator_p.h"
+#include "WizObjectOperator_p.h"
 #include "WizObjectOperator.h"
 #include <QThread>
 #include <QDebug>
@@ -111,7 +111,7 @@ void WizDocumentOperatorPrivate::moveDocumentToGroupFolder()
 
 void WizDocumentOperatorPrivate::deleteDocuments()
 {
-    //NOTE: è¿™ä¸ªåœ°æ–¹ä½¿ç”¨å¼•ç”¨æˆ–è€…ä»Žä¸»çº¿ç¨‹ä¼ é€’å€¼è¿‡æ¥ï¼Œä¼šé€ èµ„æºè®¿é—®é—®é¢˜ã€‚ä½¿ç”¨å•ä¾‹èŽ·å–åœ°å€
+    //NOTE: Õâ¸öµØ·½Ê¹ÓÃÒýÓÃ»òÕß´ÓÖ÷Ïß³Ì´«µÝÖµ¹ýÀ´£¬»áÔì×ÊÔ´·ÃÎÊÎÊÌâ¡£Ê¹ÓÃµ¥Àý»ñÈ¡µØÖ·
     WizDatabaseManager* dbMgr = WizDatabaseManager::instance();
 
     m_totoalCount = m_data->arrayDocument.size();

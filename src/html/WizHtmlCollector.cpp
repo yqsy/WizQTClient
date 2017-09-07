@@ -1,4 +1,4 @@
-ï»¿#include "WizHtmlCollector.h"
+#include "WizHtmlCollector.h"
 #include "../share/WizHtml2Zip.h"
 #include "../share/WizObjectDataDownloader.h"
 #include "utils/WizMisc.h"
@@ -419,7 +419,7 @@ bool WizHtmlToPlainText::toText(const QString& strHtmlAll, QString& strPlainText
     WizHtml2Text(strHtmlAll,strPlainText);
     strPlainText.replace("\n", " ");
 
-    //CWizHtmlReader çš„è§£ææ–¹æ³•å­˜åœ¨æ®‹ç•™æ ‡ç­¾çš„é—®é¢˜ï¼Œéœ€è¦ä¿®æ­£
+    //CWizHtmlReader µÄ½âÎö·½·¨´æÔÚ²ĞÁô±êÇ©µÄÎÊÌâ£¬ĞèÒªĞŞÕı
 //    m_strText.clear();
 
 //    // remove head or title if exists

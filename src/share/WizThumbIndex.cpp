@@ -1,4 +1,4 @@
-﻿#include "WizThumbIndex.h"
+#include "WizThumbIndex.h"
 
 #include <QBuffer>
 #include <QDebug>

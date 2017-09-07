@@ -1,4 +1,4 @@
-﻿#ifndef WIZSETTINGS_H
+#ifndef WIZSETTINGS_H
 #define WIZSETTINGS_H
 
 #include <QSettings>

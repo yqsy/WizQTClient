@@ -1,4 +1,4 @@
-﻿#include "WizEditorInsertLinkForm.h"
+#include "WizEditorInsertLinkForm.h"
 #include "ui_WizEditorInsertLinkForm.h"
 
 #include <QUrl>

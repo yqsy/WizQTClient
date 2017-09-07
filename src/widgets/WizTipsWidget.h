@@ -1,4 +1,4 @@
-ï»¿#ifndef CWIZTIPSWIDGET_H
+#ifndef CWIZTIPSWIDGET_H
 #define CWIZTIPSWIDGET_H
 
 #include <functional>
@@ -61,9 +61,9 @@ private:
     QString m_id;
     bool m_autoAdjustPosition;
     QTimer m_timer;
-    std::function<void(void)> m_showFunction;       //tipæ˜¾ç¤ºçš„æ—¶å€™æ‰§è¡Œçš„æ–¹æ³•
-    std::function<void(void)> m_hideFunction;       //ç”¨æˆ·æ²¡æœ‰ç‚¹å‡»tipï¼Œä½†æ˜¯å…¶ä»–æ“ä½œå¯¼è‡´tipä¸åº”è¯¥è¢«æ˜¾ç¤ºçš„æ—¶å€™æ‰§è¡Œçš„æ“ä½œ
-    std::function<void(void)> m_closeFunction;      //ç”¨æˆ·ç‚¹å‡»äº†tipæ—¶å€™æ‰§è¡Œçš„æ–¹æ³•
+    std::function<void(void)> m_showFunction;       //tipÏÔÊ¾µÄÊ±ºòÖ´ĞĞµÄ·½·¨
+    std::function<void(void)> m_hideFunction;       //ÓÃ»§Ã»ÓĞµã»÷tip£¬µ«ÊÇÆäËû²Ù×÷µ¼ÖÂtip²»Ó¦¸Ã±»ÏÔÊ¾µÄÊ±ºòÖ´ĞĞµÄ²Ù×÷
+    std::function<void(void)> m_closeFunction;      //ÓÃ»§µã»÷ÁËtipÊ±ºòÖ´ĞĞµÄ·½·¨
     static QSet<QString> m_tipsList;
 };
 

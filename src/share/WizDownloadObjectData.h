@@ -1,4 +1,4 @@
-﻿#ifndef WIZDOWNLOADOBJECTDATA_H
+#ifndef WIZDOWNLOADOBJECTDATA_H
 #define WIZDOWNLOADOBJECTDATA_H
 
 #include "WizDatabaseManager.h"

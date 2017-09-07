@@ -1,4 +1,4 @@
-﻿#include "WizTagBar.h"
+#include "WizTagBar.h"
 #include <QPalette>
 #include <QFontMetrics>
 #include <QPainter>

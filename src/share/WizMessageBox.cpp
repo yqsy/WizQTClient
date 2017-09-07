@@ -1,4 +1,4 @@
-ï»¿#include "WizMessageBox.h"
+#include "WizMessageBox.h"
 #include <QPushButton>
 #include <QDebug>
 #include <QApplication>
@@ -163,7 +163,7 @@ QMessageBox::StandardButton WizMessageBox::messageBox(QWidget* parent, const QSt
     }
     msg.setDefaultButton(defaultButton);
 
-    //NOTE: åœ¨Macç³»ç»Ÿä¸‹ï¼Œdialogå¯¹è¯æ¡†ä¸ä¼šåœ¨çˆ¶çª—å£ä¸­å±…ä¸­æ˜¾ç¤ºï¼Œæ­¤å¤„è¿›è¡Œå±…ä¸­å¯¹é½å¤„ç†
+    //NOTE: ÔÚMacÏµÍ³ÏÂ£¬dialog¶Ô»°¿ò²»»áÔÚ¸¸´°¿ÚÖĞ¾ÓÖĞÏÔÊ¾£¬´Ë´¦½øĞĞ¾ÓÖĞ¶ÔÆë´¦Àí
 #ifdef Q_OS_MAC
     QObject::connect(&msg, &WizMessageBox::resized, [&](){
         if (parent)

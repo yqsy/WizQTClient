@@ -1,4 +1,4 @@
-﻿#include "WizThumbCache.h"
+#include "WizThumbCache.h"
 #include "WizThumbCache_p.h"
 #include "share/WizDatabaseManager.h"
 #include "share/WizDatabase.h"

@@ -1,4 +1,4 @@
-ï»¿#include "WizNoteManager.h"
+#include "WizNoteManager.h"
 #include <QFileInfo>
 #include <QSettings>
 #include <QNetworkAccessManager>
@@ -140,7 +140,7 @@ bool WizNoteManager::createNote(WIZDOCUMENTDATA& data, const QString& strKbGUID,
 
 bool WizNoteManager::createNoteByTemplate(WIZDOCUMENTDATA& data, const WIZTAGDATA& tag, const QString& strZiw)
 {
-    //é€šè¿‡æ¨¡æ¿åˆ›å»ºç¬”è®°æ—¶ï¼Œå¦‚æœæ¨¡æ¿æ–‡ä»¶ä¸å­˜åœ¨åˆ™åˆ›å»ºä¸€ç¯‡ç©ºç¬”è®°
+    //Í¨¹ıÄ£°å´´½¨±Ê¼ÇÊ±£¬Èç¹ûÄ£°åÎÄ¼ş²»´æÔÚÔò´´½¨Ò»Æª¿Õ±Ê¼Ç
     if (!QFile::exists(strZiw))
     {
         qDebug() << "Template file not exists : " << strZiw;
@@ -157,9 +157,9 @@ bool WizNoteManager::createNoteByTemplate(WIZDOCUMENTDATA& data, const WIZTAGDAT
 
 void WizNoteManager::updateTemplateJS(const QString& local)
 {
-    //è½¯ä»¶å¯åŠ¨ä¹‹åè·å–æ¨¡æ¿ä¿¡æ¯ï¼Œæ£€æŸ¥template.jsæ˜¯å¦å­˜åœ¨ã€æ˜¯å¦æ˜¯æœ€æ–°ç‰ˆã€‚éœ€è¦ä¸‹è½½æ—¶è¿›è¡Œä¸‹è½½
+    //Èí¼şÆô¶¯Ö®ºó»ñÈ¡Ä£°åĞÅÏ¢£¬¼ì²étemplate.jsÊÇ·ñ´æÔÚ¡¢ÊÇ·ñÊÇ×îĞÂ°æ¡£ĞèÒªÏÂÔØÊ±½øĞĞÏÂÔØ
     WizExecuteOnThread(WIZ_THREAD_NETWORK, [=]() {
-        //NOTE:ç°åœ¨ç¼–è¾‘å™¨ä¾èµ–template.jsæ–‡ä»¶ã€‚éœ€è¦ç¡®ä¿è¯¥æ–‡ä»¶å­˜åœ¨ã€‚å¦‚æœæ–‡ä»¶ä¸å­˜åœ¨åˆ™æ‹·è´
+        //NOTE:ÏÖÔÚ±à¼­Æ÷ÒÀÀµtemplate.jsÎÄ¼ş¡£ĞèÒªÈ·±£¸ÃÎÄ¼ş´æÔÚ¡£Èç¹ûÎÄ¼ş²»´æÔÚÔò¿½±´
         WizEnsurePathExists(Utils::WizPathResolve::customNoteTemplatesPath());
         if (!QFile::exists(Utils::WizPathResolve::wizTemplateJsFilePath()))
         {
@@ -188,11 +188,11 @@ void WizNoteManager::updateTemplateJS(const QString& local)
             ba = loop.result();
         }
 
-        //æ ¹æ®çº¿ä¸Šçš„å†…å®¹æ¥åˆ¤æ–­æœ¬åœ°çš„æ¨¡æ¿æ–‡ä»¶æ˜¯å¦éœ€è¦æ›´æ–°
+        //¸ù¾İÏßÉÏµÄÄÚÈİÀ´ÅĞ¶Ï±¾µØµÄÄ£°åÎÄ¼şÊÇ·ñĞèÒª¸üĞÂ
         if (!updateLocalTemplates(ba, manager))
             return;
 
-        //æ›´æ–°æˆåŠŸä¹‹åå°†æ•°æ®ä¿å­˜åˆ°æœ¬åœ°
+        //¸üĞÂ³É¹¦Ö®ºó½«Êı¾İ±£´æµ½±¾µØ
         QString jsonFile = Utils::WizPathResolve::wizTemplateJsonFilePath();
         std::ofstream logFile(jsonFile.toUtf8().constData(), std::ios::out | std::ios::trunc);
         logFile << ba.constData();
@@ -201,7 +201,7 @@ void WizNoteManager::updateTemplateJS(const QString& local)
 
 void WizNoteManager::downloadTemplatePurchaseRecord()
 {
-    //ä¸‹è½½ç”¨æˆ·è´­ä¹°çš„æ¨¡æ¿åˆ—è¡¨
+    //ÏÂÔØÓÃ»§¹ºÂòµÄÄ£°åÁĞ±í
     WizExecuteOnThread(WIZ_THREAD_NETWORK, [=]() {
         WizEnsurePathExists(Utils::WizPathResolve::customNoteTemplatesPath());
         //
@@ -284,7 +284,7 @@ bool WizNoteManager::updateLocalTemplates(const QByteArray& newJsonData, QNetwor
     QMap<int, TemplateData> serverTmplMap;
     getTemplatesFromJsonData(newJsonData, serverTmplMap);
 
-    //ä¸‹è½½æœåŠ¡å™¨ä¸Šæœ‰æ›´æ–°çš„æ¨¡æ¿
+    //ÏÂÔØ·şÎñÆ÷ÉÏÓĞ¸üĞÂµÄÄ£°å
     for (auto it = serverTmplMap.begin(); it != serverTmplMap.end(); ++it)
     {
         auto iter = localTmplMap.find(it.key());
@@ -300,7 +300,7 @@ bool WizNoteManager::updateLocalTemplates(const QByteArray& newJsonData, QNetwor
         }
     }
 
-    //åˆ é™¤æœåŠ¡å™¨ä¸Šä¸å­˜åœ¨çš„æ¨¡æ¿
+    //É¾³ı·şÎñÆ÷ÉÏ²»´æÔÚµÄÄ£°å
     for (auto it = localTmplMap.begin(); it != localTmplMap.end(); ++it)
     {
         auto iter = serverTmplMap.find(it.key());

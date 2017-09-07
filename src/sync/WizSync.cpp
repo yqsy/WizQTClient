@@ -1,4 +1,4 @@
-ï»¿#include "WizSync.h"
+#include "WizSync.h"
 #include "WizKMSync_p.h"
 #include "WizKMSync.h"
 
@@ -173,7 +173,7 @@ bool WizKMSync::syncCore()
     if (m_pEvents->isStop())
         return FALSE;
     //
-    //ä¸Šä¼ å®Œç¬”è®°ä¹‹åå†ä¸Šä¼ æ–‡ä»¶å¤¹ç­‰è®¾ç½®
+    //ÉÏ´«Íê±Ê¼ÇÖ®ºóÔÙÉÏ´«ÎÄ¼ş¼ĞµÈÉèÖÃ
     m_pEvents->onStatus(QObject::tr("Sync settings"));
     uploadKeys();
     //
@@ -232,11 +232,11 @@ bool WizKMSync::syncCore()
     downloadKeys();
     //
     /*
-    // é‡æ–°æ›´æ–°æœåŠ¡å™¨çš„æ•°æ®ï¼Œå› ä¸ºå¦‚æœpcå®¢æˆ·ç«¯æ–‡ä»¶å¤¹è¢«ç§»åŠ¨åï¼Œ
-    // æœåŠ¡å™¨ä¸Šé¢å·²ç»æ²¡æœ‰è¿™ä¸ªæ–‡ä»¶å¤¹äº†ï¼Œ
-    // ä½†æ˜¯æ‰‹æœºåŒæ­¥çš„æ—¶å€™ï¼Œå› ä¸ºåŸæœ‰çš„æ–‡ä»¶å¤¹é‡Œé¢è¿˜æœ‰ç¬”è®°ï¼Œ
-    // å› æ­¤ä¸ä¼šè¢«åˆ é™¤ï¼Œå¯¼è‡´æ‰‹æœºä¸Šè¿˜æœ‰ç©ºçš„æ–‡ä»¶å¤¹
-    // å› æ­¤åœ¨è¿™é‡Œéœ€è¦é‡æ–°æ›´æ–°ä¸€ä¸‹
+    // ÖØĞÂ¸üĞÂ·şÎñÆ÷µÄÊı¾İ£¬ÒòÎªÈç¹ûpc¿Í»§¶ËÎÄ¼ş¼Ğ±»ÒÆ¶¯ºó£¬
+    // ·şÎñÆ÷ÉÏÃæÒÑ¾­Ã»ÓĞÕâ¸öÎÄ¼ş¼ĞÁË£¬
+    // µ«ÊÇÊÖ»úÍ¬²½µÄÊ±ºò£¬ÒòÎªÔ­ÓĞµÄÎÄ¼ş¼ĞÀïÃæ»¹ÓĞ±Ê¼Ç£¬
+    // Òò´Ë²»»á±»É¾³ı£¬µ¼ÖÂÊÖ»úÉÏ»¹ÓĞ¿ÕµÄÎÄ¼ş¼Ğ
+    // Òò´ËÔÚÕâÀïĞèÒªÖØĞÂ¸üĞÂÒ»ÏÂ
     */
     m_pEvents->onStatus(QObject::tr("Sync settings"));
     processOldKeyValues();
@@ -324,7 +324,7 @@ bool WizKMSync::downloadKeys()
 }
 
 /*
- * ////é‡æ–°è®¾ç½®æœåŠ¡å™¨çš„key valueæ•°æ® é˜²æ­¢è¢«ç§»åŠ¨çš„æ–‡ä»¶å¤¹æ²¡æœ‰åˆ é™¤
+ * ////ÖØĞÂÉèÖÃ·şÎñÆ÷µÄkey valueÊı¾İ ·ÀÖ¹±»ÒÆ¶¯µÄÎÄ¼ş¼ĞÃ»ÓĞÉ¾³ı
  */
 bool WizKMSync::processOldKeyValues()
 {
@@ -339,7 +339,7 @@ bool WizKMSync::processOldKeyValues()
         QString strKey = it->first;
         const WIZKEYVALUEDATA& data = it->second;
         //
-        // æœ€åä¸€æ¬¡æ‰è®°ä½ç‰ˆæœ¬å·
+        // ×îºóÒ»´Î²Å¼Ç×¡°æ±¾ºÅ
         m_pDatabase->setLocalValue(strKey, data.strValue, data.nVersion, TRUE);
     }
     //
@@ -786,13 +786,13 @@ bool UploadDocument(const WIZKBINFO& kbInfo, int size, int start, int total, int
             //
             if (server.lastLocalError() == "WizErrorInvalidZip")
             {
-                ////æ— æ•ˆçš„zipæ–‡ä»¶////
+                ////ÎŞĞ§µÄzipÎÄ¼ş////
                 pDatabase->deleteDocumentFromLocal(local.strGUID);
             }
         }
         else
         {
-            ////æœ¬åœ°æ²¡æœ‰æ•°æ®ï¼ŒæœåŠ¡å™¨ä¹Ÿæ²¡æœ‰æ•°æ®////
+            ////±¾µØÃ»ÓĞÊı¾İ£¬·şÎñÆ÷Ò²Ã»ÓĞÊı¾İ////
             pDatabase->deleteDocumentFromLocal(local.strGUID);
         }
     }
@@ -1237,7 +1237,7 @@ bool WizDownloadDocumentsByGuids(IWizKMSyncEvents* pEvents, WizKMAccountsServer&
 {
     /*
     ////////
-    ////å‡†å¤‡ç¾¤ç»„ä¿¡æ¯////
+    ////×¼±¸Èº×éĞÅÏ¢////
     */
     std::map<QString, WIZGROUPDATA> mapGroup;
     for (CWizGroupDataArray::const_iterator it = arrayGroup.begin();
@@ -1248,7 +1248,7 @@ bool WizDownloadDocumentsByGuids(IWizKMSyncEvents* pEvents, WizKMAccountsServer&
     }
     //
     /*
-    ////ä¸‹è½½ç¬”è®°////
+    ////ÏÂÔØ±Ê¼Ç////
     */
     QString strKbGUID = kbGuid;
     const CWizStdStringArray& arrayDocumentGUID = guids;
@@ -1308,7 +1308,7 @@ bool WizDownloadMessages(IWizKMSyncEvents* pEvents, WizKMAccountsServer& server,
     //
     /*
     ////////
-    ////å‡†å¤‡ç¾¤ç»„ä¿¡æ¯////
+    ////×¼±¸Èº×éĞÅÏ¢////
     */
     std::map<QString, WIZGROUPDATA> mapGroup;
     for (CWizGroupDataArray::const_iterator it = arrayGroup.begin();
@@ -1319,7 +1319,7 @@ bool WizDownloadMessages(IWizKMSyncEvents* pEvents, WizKMAccountsServer& server,
     }
     //
     /*
-    ////æŒ‰ç…§ç¾¤ç»„åˆ†ç»„ç¬”è®°////
+    ////°´ÕÕÈº×é·Ö×é±Ê¼Ç////
     */
     std::map<QString, CWizStdStringArray> mapKbGUIDDocuments;
     for (WIZMESSAGEDATA it : arrayMessage)
@@ -1333,7 +1333,7 @@ bool WizDownloadMessages(IWizKMSyncEvents* pEvents, WizKMAccountsServer& server,
     }
     //
     /*
-    ////æŒ‰ç…§kbï¼Œä¸‹è½½æ¶ˆæ¯é‡Œé¢çš„ç¬”è®°////
+    ////°´ÕÕkb£¬ÏÂÔØÏûÏ¢ÀïÃæµÄ±Ê¼Ç////
     */
     for (std::map<QString, CWizStdStringArray>::const_iterator it = mapKbGUIDDocuments.begin();
         it != mapKbGUIDDocuments.end();
@@ -1526,8 +1526,8 @@ public:
     }
 };
 
-//FIXME:æ›´æ–°ä¼ä¸šç¾¤ç»„æˆå‘˜å¤´åƒå®é™…åº”è¯¥åœ¨è·å–bizåˆ—è¡¨çš„æ—¶å€™å¤„ç†ã€‚ä½†æ˜¯ç°åœ¨æœåŠ¡å™¨ç«¯è¿”å›çš„æ•°æ®
-//å­˜åœ¨é—®é¢˜ï¼Œéœ€è¦åœ¨æœ¬åœ°å¼ºåˆ¶æ›´æ–°æ•°æ®
+//FIXME:¸üĞÂÆóÒµÈº×é³ÉÔ±Í·ÏñÊµ¼ÊÓ¦¸ÃÔÚ»ñÈ¡bizÁĞ±íµÄÊ±ºò´¦Àí¡£µ«ÊÇÏÖÔÚ·şÎñÆ÷¶Ë·µ»ØµÄÊı¾İ
+//´æÔÚÎÊÌâ£¬ĞèÒªÔÚ±¾µØÇ¿ÖÆ¸üĞÂÊı¾İ
 bool WizSyncBizGroupAvatar(IWizSyncableDatabase* pPersonalDatabase)
 {
     CWizBizUserDataArray arrayUser;
@@ -1611,7 +1611,7 @@ bool WizSyncDatabase(const WIZUSERINFO& info, IWizKMSyncEvents* pEvents,
     pEvents->onSyncProgress(1);
 
     /*
-    ////è·å¾—ç¾¤ç»„ä¿¡æ¯////
+    ////»ñµÃÈº×éĞÅÏ¢////
     */
     //
     //only check biz list at first sync of day, or sync by manual
@@ -1624,7 +1624,7 @@ bool WizSyncDatabase(const WIZUSERINFO& info, IWizKMSyncEvents* pEvents,
         if (server.getBizList(arrayBiz))
         {
             pDatabase->onDownloadBizs(arrayBiz);
-            //FIXME: å› ä¸ºç›®å‰æœåŠ¡å™¨è¿”å›çš„bizåˆ—è¡¨ä¸­æ— å¤´åƒæ›´æ–°æ•°æ®ï¼Œéœ€è¦å¼ºåˆ¶æ›´æ–°ç¾¤ç»„ç”¨æˆ·çš„å¤´åƒã€‚
+            //FIXME: ÒòÎªÄ¿Ç°·şÎñÆ÷·µ»ØµÄbizÁĞ±íÖĞÎŞÍ·Ïñ¸üĞÂÊı¾İ£¬ĞèÒªÇ¿ÖÆ¸üĞÂÈº×éÓÃ»§µÄÍ·Ïñ¡£
             WizSyncBizGroupAvatar(pDatabase);
         }
         else
@@ -1661,13 +1661,13 @@ bool WizSyncDatabase(const WIZUSERINFO& info, IWizKMSyncEvents* pEvents,
     pEvents->setDatabaseCount(groupCount + 1);
     //
     /*
-    ////ä¸‹è½½è®¾ç½®////
+    ////ÏÂÔØÉèÖÃ////
     */
     pEvents->onStatus(QObject::tr("Downloading settings"));
     DownloadAccountKeys(server, pDatabase);
 
     /*
-    ////ä¸‹è½½æ¶ˆæ¯////
+    ////ÏÂÔØÏûÏ¢////
     */
     pEvents->onStatus(QObject::tr("Downloading messages"));
     WizDownloadMessages(pEvents, server, pDatabase, arrayGroup);
@@ -1858,13 +1858,13 @@ bool WizQuickDownloadMessage(const WIZUSERINFO& info, IWizKMSyncEvents* pEvents,
     server.setUserInfo(info);
     server.setEvents(pEvents);
     /*
-    ////è·å¾—ç¾¤ç»„ä¿¡æ¯////
+    ////»ñµÃÈº×éĞÅÏ¢////
     */
     //
     CWizGroupDataArray arrayGroup;
     server.getGroupList(arrayGroup);
     /*
-    ////ä¸‹è½½æ¶ˆæ¯////
+    ////ÏÂÔØÏûÏ¢////
     */
     return WizDownloadMessages(pEvents, server, pDatabase, arrayGroup);
 }
@@ -1878,13 +1878,13 @@ bool WizDownloadDocumentsByGuids(const WIZUSERINFO& info,
     WizKMAccountsServer server;
     server.setUserInfo(info);
     /*
-    ////è·å¾—ç¾¤ç»„ä¿¡æ¯////
+    ////»ñµÃÈº×éĞÅÏ¢////
     */
     //
     CWizGroupDataArray arrayGroup;
     server.getGroupList(arrayGroup);
     /*
-    ////ä¸‹è½½æ¶ˆæ¯////
+    ////ÏÂÔØÏûÏ¢////
     */
     //
     WizKMSyncEvents events;

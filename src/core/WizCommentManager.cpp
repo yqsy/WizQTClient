@@ -1,4 +1,4 @@
-ï»¿#include "WizCommentManager.h"
+#include "WizCommentManager.h"
 
 #include <QMutexLocker>
 #include <QNetworkAccessManager>
@@ -79,7 +79,7 @@ void WizCommentManager::setCommentUrlTemplate(QString url)
 }
 
 /*
- *  è·å–è¯„è®ºæ•°ç›®æ˜¯é€šè¿‡ç½‘ç»œè¯·æ±‚è·å–çš„ï¼Œéœ€è¦å»¶è¿Ÿå¤„ç†è¯·æ±‚ã€‚é˜²æ­¢åœ¨å¿«é€Ÿåˆ‡æ¢ç¬”è®°æ—¶äº§ç”Ÿå¤§é‡çš„ç½‘ç»œè¯·æ±‚
+ *  »ñÈ¡ÆÀÂÛÊıÄ¿ÊÇÍ¨¹ıÍøÂçÇëÇó»ñÈ¡µÄ£¬ĞèÒªÑÓ³Ù´¦ÀíÇëÇó¡£·ÀÖ¹ÔÚ¿ìËÙÇĞ»»±Ê¼ÇÊ±²úÉú´óÁ¿µÄÍøÂçÇëÇó
  */
 void WizCommentManager::queryCommentCount(const QString& kbGUID, const QString& GUID, bool removeOtherQueryRequest)
 {

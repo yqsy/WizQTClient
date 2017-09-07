@@ -1,4 +1,4 @@
-Ôªø#include "WizStyleHelper.h"
+#include "WizStyleHelper.h"
 
 #include <QFontMetrics>
 #include <QSize>
@@ -1119,7 +1119,7 @@ void WizStyleHelper::drawListViewItemThumb(QPainter* p, const QRect& rc, int nBa
     QFont fontThumb;
     nFontHeight = Utils::WizStyleHelper::fontThumb(fontThumb);
     QPixmap pixGreyPoint(Utils::WizStyleHelper::skinResourceFileName("document_grey_point", true));
-    QRect rcLead = rcd;   //ÊéíÂ∫èÁ±ªÂûãÊàñÊ†áÁ≠æÁ≠â
+    QRect rcLead = rcd;   //≈≈–Ú¿‡–ÕªÚ±Í«©µ»
     int nLeadHeight;
     if (!lead.isEmpty()) {
         for (int i = 0; i < lead.count(); i++) {
@@ -1175,7 +1175,7 @@ void WizStyleHelper::drawListViewItemThumb(QPainter* p, const QRect& rc, int nBa
             rcSummary.setRight(rcPix.left() - 4);
         }
 
-        if (!abs.isEmpty()) {          //  Á¨îËÆ∞ÂÜÖÂÆπ
+        if (!abs.isEmpty()) {          //  ± º«ƒ⁄»›
             QString strText(abs);
             rcSummary.adjust(0, -4, 0, 0);
             p->setClipRect(rcSummary);

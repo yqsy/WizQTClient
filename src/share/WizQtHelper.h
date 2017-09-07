@@ -1,4 +1,4 @@
-﻿#ifndef WIZQTHELPER_H
+#ifndef WIZQTHELPER_H
 #define WIZQTHELPER_H
 
 #include <QtGlobal>

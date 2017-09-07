@@ -1,4 +1,4 @@
-ï»¿#include "WizDocumentView.h"
+#include "WizDocumentView.h"
 
 #include <QLineEdit>
 #include <QLabel>
@@ -342,8 +342,8 @@ void WizDocumentView::initStat(const WIZDOCUMENTDATA& data, bool forceEdit)
 
     m_title->setLocked(m_bLocked, nLockReason, bGroup);
     //
-    //   ä¸ªäººç¬”è®°æ£€æŸ¥ç¬”è®°æ˜¯å¦å·²ç»æ›´æ–°äº†
-    //æš‚æ—¶ç¦æ­¢ï¼Œç­‰å¾…æœåŠ¡å™¨ä¼˜åŒ–é€Ÿåº¦
+    //   ¸öÈË±Ê¼Ç¼ì²é±Ê¼ÇÊÇ·ñÒÑ¾­¸üĞÂÁË
+    //ÔİÊ±½ûÖ¹£¬µÈ´ı·şÎñÆ÷ÓÅ»¯ËÙ¶È
     if (WizNotifyBar::LockForGruop == nLockReason)
     {
         startCheckDocumentEditStatus();
@@ -494,7 +494,7 @@ void WizDocumentView::setEditorMode(WizEditorMode editorMode)
     {
         m_editStatus = DOCUMENT_STATUS_NOSTATUS;
 
-        // ä¿å­˜æ ‡é¢˜ï¼Œé˜²æ­¢å› å¤šçº¿ç¨‹ä¿å­˜å¼•èµ·è¦†ç›–
+        // ±£´æ±êÌâ£¬·ÀÖ¹Òò¶àÏß³Ì±£´æÒıÆğ¸²¸Ç
         m_title->onTitleEditFinished();
         m_title->hideMessageTips(false);
     }
@@ -698,8 +698,8 @@ void WizDocumentView::stopDocumentEditingStatus()
 
 void WizDocumentView::startCheckDocumentEditStatus()
 {
-    //é¦–å…ˆæ£€æŸ¥ç¬”è®°æ˜¯å¦æ˜¯å¾…ä¸‹è½½çŠ¶æ€ï¼Œå¦‚æœä¸€ç¯‡ç¬”è®°ä¸€ç›´æ‰“å¼€ï¼Œè‡ªåŠ¨åŒæ­¥ä¼šæŠŠç¬”è®°çŠ¶æ€è®¾ç½®ä¸ºå¾…ä¸‹è½½ï¼Œ
-    //ä½†æ˜¯å…¶ç‰ˆæœ¬å·æ˜¯æœåŠ¡å™¨çš„ç‰ˆæœ¬å·ï¼Œæ£€æŸ¥æ–°ç‰ˆæœ¬æ— æ•ˆæœ
+    //Ê×ÏÈ¼ì²é±Ê¼ÇÊÇ·ñÊÇ´ıÏÂÔØ×´Ì¬£¬Èç¹ûÒ»Æª±Ê¼ÇÒ»Ö±´ò¿ª£¬×Ô¶¯Í¬²½»á°Ñ±Ê¼Ç×´Ì¬ÉèÖÃÎª´ıÏÂÔØ£¬
+    //µ«ÊÇÆä°æ±¾ºÅÊÇ·şÎñÆ÷µÄ°æ±¾ºÅ£¬¼ì²éĞÂ°æ±¾ÎŞĞ§¹û
 
     WizDatabase& db = m_dbMgr.db(m_note.strKbGUID);
     if (!db.isDocumentDownloaded(m_note.strGUID))

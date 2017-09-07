@@ -1,4 +1,4 @@
-﻿#include "WizThreads.h"
+#include "WizThreads.h"
 #include "WizThreads_p.h"
 
 #include <QThread>

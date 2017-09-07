@@ -1,4 +1,4 @@
-ï»¿#include "WizIndex.h"
+#include "WizIndex.h"
 
 #include <QDebug>
 
@@ -3612,7 +3612,7 @@ void WizIndex::addExtraFolder(const QString& strLocation)
     QString strParent = strLocation;
     int idx = strParent.lastIndexOf("/", -2);
     while (idx) {
-        // å¦‚æœæ–‡ä»¶å¤¹æ ¼å¼é”™è¯¯ï¼Œç›´æ¥é€€å‡ºï¼Œé˜²æ­¢æ­»å¾ªç¯
+        // Èç¹ûÎÄ¼ş¼Ğ¸ñÊ½´íÎó£¬Ö±½ÓÍË³ö£¬·ÀÖ¹ËÀÑ­»·
         if (strParent.left(1) != "/" || strParent.right(1) != "/")
         {
             qCritical() << "try to add a error location : " << strParent;

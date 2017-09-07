@@ -1,4 +1,4 @@
-ï»¿//
+//
 //  RMStore.h
 //  RMStore
 //
@@ -68,7 +68,7 @@ extern NSInteger const RMStoreErrorCodeUnableToCompleteVerification;
 
 /** Request payment of the product with the given product identifier. `successBlock` will be called if the payment is successful, `failureBlock` if it isn't.
  @param productIdentifier The identifier of the product whose payment will be requested.
- @param userIdentifier An opaque identifier of the userâ€™s account, if applicable. Can be `nil`.
+ @param userIdentifier An opaque identifier of the user¡¯s account, if applicable. Can be `nil`.
  @param successBlock The block to be called if the payment is sucessful. Can be `nil`.
  @param failureBlock The block to be called if the payment fails or there isn't any product with the given identifier. Can be `nil`.
  @see [SKPayment applicationUsername]
@@ -105,7 +105,7 @@ extern NSInteger const RMStoreErrorCodeUnableToCompleteVerification;
 
 
 /** Request to restore previously completed purchases of a certain user. `successBlock` will be called if the restore transactions request is successful, `failureBlock` if it isn't.
- @param userIdentifier An opaque identifier of the userâ€™s account.
+ @param userIdentifier An opaque identifier of the user¡¯s account.
  @param successBlock The block to be called if the restore transactions request is sucessful. Can be `nil`.
  @param failureBlock The block to be called if the restore transactions request fails. Can be `nil`.
  */
@@ -118,7 +118,7 @@ extern NSInteger const RMStoreErrorCodeUnableToCompleteVerification;
 /// @name Getting the receipt
 ///---------------------------------------------
 
-/** Returns the url of the bundleâ€™s App Store receipt, or nil if the receipt is missing.
+/** Returns the url of the bundle¡¯s App Store receipt, or nil if the receipt is missing.
  If this method returns `nil` you should refresh the receipt by calling `refreshReceipt`.
  @see refreshReceipt
  */
@@ -141,7 +141,7 @@ extern NSInteger const RMStoreErrorCodeUnableToCompleteVerification;
 
 /**
  The content downloader. Required to download product content from your own server.
- @discussion Hosted content from Appleâ€™s server (SKDownload) is handled automatically. You don't need to provide a content downloader for it.
+ @discussion Hosted content from Apple¡¯s server (SKDownload) is handled automatically. You don't need to provide a content downloader for it.
  */
 @property (nonatomic, weak) id<RMStoreContentDownloader> contentDownloader;
 
@@ -194,7 +194,7 @@ extern NSInteger const RMStoreErrorCodeUnableToCompleteVerification;
  @param successBlock Called if the download was successful. Must be called in the main queue.
  @param progressBlock Called to notify progress. Provides a number between 0.0 and 1.0, inclusive, where 0.0 means no data has been downloaded and 1.0 means all the data has been downloaded. Must be called in the main queue.
  @param failureBlock Called if the download failed. Must be called in the main queue.
- @discussion Hosted content from Appleâ€™s server (@c SKDownload) is handled automatically by RMStore.
+ @discussion Hosted content from Apple¡¯s server (@c SKDownload) is handled automatically by RMStore.
  */
 - (void)downloadContentForTransaction:(SKPaymentTransaction*)transaction
                               success:(void (^)())successBlock

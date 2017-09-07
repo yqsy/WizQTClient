@@ -1,4 +1,4 @@
-﻿#include "WizUserServiceExprDialog.h"
+#include "WizUserServiceExprDialog.h"
 #include "ui_WizUserServiceExprDialog.h"
 #include <QPushButton>
 #include <QDesktopServices>

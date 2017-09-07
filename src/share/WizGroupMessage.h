@@ -1,4 +1,4 @@
-﻿#ifndef WIZGROUPMESSAGE_H
+#ifndef WIZGROUPMESSAGE_H
 #define WIZGROUPMESSAGE_H
 
 #include "wizapi.h"

@@ -1,4 +1,4 @@
-ï»¿#include "WizMainWindow.h"
+#include "WizMainWindow.h"
 
 #include <QToolBar>
 #include <QMenuBar>
@@ -211,7 +211,7 @@ WizMainWindow::WizMainWindow(WizDatabaseManager& dbMgr, QWidget *parent)
     connect(m_syncQuick, SIGNAL(promptFreeServiceExpr()), SLOT(on_promptFreeServiceExpr()));
     connect(m_syncQuick, SIGNAL(promptVipServiceExpr()), SLOT(on_promptVipServiceExpr()));
     //
-    // å¦‚æžœæ²¡æœ‰ç¦æ­¢è‡ªåŠ¨åŒæ­¥ï¼Œåˆ™åœ¨æ‰“å¼€è½¯ä»¶åŽç«‹å³åŒæ­¥ä¸€æ¬¡
+    // Èç¹ûÃ»ÓÐ½ûÖ¹×Ô¶¯Í¬²½£¬ÔòÔÚ´ò¿ªÈí¼þºóÁ¢¼´Í¬²½Ò»´Î
     if (m_settings->syncInterval() > 0)
     {
         QTimer::singleShot(15 * 1000, m_syncFull, SLOT(syncAfterStart()));
@@ -342,7 +342,7 @@ bool WizMainWindow::eventFilter(QObject* watched, QEvent* event)
         {
             if (QWindowStateChangeEvent* stateEvent = dynamic_cast<QWindowStateChangeEvent*>(event))
             {
-                // ä½¿ç”¨ç¨‹åºå³ä¸Šè§’æŒ‰é’®å°†çª—å£æœ€å¤§åŒ–æ—¶ï¼Œéœ€è¦ä¿®æ”¹æŒ‰é’®åç§°
+                // Ê¹ÓÃ³ÌÐòÓÒÉÏ½Ç°´Å¥½«´°¿Ú×î´ó»¯Ê±£¬ÐèÒªÐÞ¸Ä°´Å¥Ãû³Æ
                 static int state = -1;
                 int oldState = stateEvent->oldState();
                 if (state != oldState && (oldState & Qt::WindowFullScreen || windowState() & Qt::WindowFullScreen))
@@ -353,7 +353,7 @@ bool WizMainWindow::eventFilter(QObject* watched, QEvent* event)
 
                 if (!(oldState & Qt::WindowFullScreen) && (windowState() & Qt::WindowFullScreen))
                 {
-                    //NOTE:å…¨å±æ—¶éšè—æœç´¢æç¤º
+                    //NOTE:È«ÆÁÊ±Òþ²ØËÑË÷ÌáÊ¾
                     m_searchWidget->hideCompleter();
                     m_searchWidget->setCompleterUsable(false);
                 }
@@ -568,7 +568,7 @@ void WizMainWindow::on_actionClose_triggered()
     QWidget* wgt = qApp->activeWindow();
     if (wgt && wgt != this)
     {
-        //FIXME:  çª—å£å…¨å±æ—¶ç›´æŽ¥å…³é—­ä¼šé€ æˆé»‘å±ï¼Œæ­¤å¤„æ”¹ä¸ºå…ˆå–æ¶ˆå…¨å±ç„¶åŽå…³é—­ã€‚
+        //FIXME:  ´°¿ÚÈ«ÆÁÊ±Ö±½Ó¹Ø±Õ»áÔì³ÉºÚÆÁ£¬´Ë´¦¸ÄÎªÏÈÈ¡ÏûÈ«ÆÁÈ»ºó¹Ø±Õ¡£
 
         if (wgt->windowState() & Qt::WindowFullScreen)
         {
@@ -1550,7 +1550,7 @@ void WizMainWindow::windowActived()
     WizGetAnalyzer().logAction("bizUserQuickDownloadMessage");
 }
 
-/** webé¡µé¢è°ƒç”¨è¯¥æ–¹æ³•ï¼Œæ‰“å¼€URL
+/** webÒ³Ãæµ÷ÓÃ¸Ã·½·¨£¬´ò¿ªURL
   * @brief MainWindow::OpenURLInDefaultBrowser
  * @param strUrl
  */
@@ -1559,7 +1559,7 @@ void WizMainWindow::OpenURLInDefaultBrowser(const QString& strUrl)
     QDesktopServices::openUrl(strUrl);
 }
 
-/** webé¡µé¢è°ƒç”¨è¯¥æ–¹æ³•ï¼Œtokenå¤±æ•ˆæ—¶é‡æ–°èŽ·å–token
+/** webÒ³Ãæµ÷ÓÃ¸Ã·½·¨£¬tokenÊ§Ð§Ê±ÖØÐÂ»ñÈ¡token
  * @brief MainWindow::GetToken
  * @param strFunctionName
  */
@@ -1581,9 +1581,9 @@ void WizMainWindow::GetToken(const QString& strFunctionName)
     });
 }
 
-/**   webé¡µé¢è°ƒç”¨è¯¥æ–¹æ³•ï¼Œå°†é¡µé¢çš„ç»“æžœè¿”å›ž
+/**   webÒ³Ãæµ÷ÓÃ¸Ã·½·¨£¬½«Ò³ÃæµÄ½á¹û·µ»Ø
  * @brief MainWindow::SetDialogResult
- * @param result  webé¡µé¢è¿”å›žç»“æžœï¼Œå¦‚éœ€æ›´æ–°ç¬”è®°æ•°æ®ï¼Œä¼šè¿”å›ž1
+ * @param result  webÒ³Ãæ·µ»Ø½á¹û£¬ÈçÐè¸üÐÂ±Ê¼ÇÊý¾Ý£¬»á·µ»Ø1
  */
 void WizMainWindow::SetDialogResult(int nResult)
 {
@@ -1708,7 +1708,7 @@ void WizMainWindow::initToolBar()
     m_toolBar->addWidget(new WizMacFixedSpacer(QSize(28, 1), m_toolBar), "", "");
 
     int buttonWidth = WizIsChineseLanguage(userSettings().locale()) ? 116 : 124;
-    //WARNING:ä¸èƒ½åˆ›å»ºä½¿ç”¨toolbarä½œä¸ºçˆ¶ç±»å¯¹è±¡ï¼Œä¼šé€ æˆè¾“å…¥æ³•åç§»
+    //WARNING:²»ÄÜ´´½¨Ê¹ÓÃtoolbar×÷Îª¸¸Àà¶ÔÏó£¬»áÔì³ÉÊäÈë·¨Æ«ÒÆ
     QPixmap pixExtraMenu = Utils::WizStyleHelper::skinResourceFileName("actionNewNoteExtraMenu", true);
     WizMacToolBarButtonItem* newNoteItem = new WizMacToolBarButtonItem(tr("New Note"), pixExtraMenu, buttonWidth, nullptr);
     connect(newNoteItem, SIGNAL(triggered(bool)),
@@ -2188,7 +2188,7 @@ void WizMainWindow::init()
     //
     QTimer::singleShot(1000 * 3, this, SLOT(on_actionSync_triggered()));
 
-    //ESCé”®é€€å‡ºå…¨å±
+    //ESC¼üÍË³öÈ«ÆÁ
     bindESCToQuitFullScreen(this);
 }
 
@@ -2257,7 +2257,7 @@ void WizMainWindow::on_syncDone(int nErrorCode, const QString& strErrorMsg, bool
     }
     else if (WIZKM_XMLRPC_ERROR_BIZ_SERVICE_EXPR == nErrorCode && !isBackground)
     {
-        //å½“ç”¨æˆ·çš„ä¼ä¸šä»˜è´¹åˆ°æœŸå¹¶ä¸”æœ‰å¾…ä¸Šä¼ çš„å†…å®¹çš„æ—¶å€™ï¼Œè¿›è¡Œå¼¹æ¡†æç¤º
+        //µ±ÓÃ»§µÄÆóÒµ¸¶·Ñµ½ÆÚ²¢ÇÒÓÐ´ýÉÏ´«µÄÄÚÈÝµÄÊ±ºò£¬½øÐÐµ¯¿òÌáÊ¾
         WizMessageBox::information(this, tr("Info"), strErrorMsg);
     }
 
@@ -2367,7 +2367,7 @@ void WizMainWindow::on_actionNewNoteByTemplate_triggered()
 {
     WizGetAnalyzer().logAction("newNoteByTemplate");
 
-    //é€šè¿‡æ¨¡æ¿åˆ›å»ºç¬”è®°
+    //Í¨¹ýÄ£°å´´½¨±Ê¼Ç
     WizDocTemplateDialog dlg(m_dbMgr);
     connect(&dlg, SIGNAL(documentTemplateSelected(TemplateData)), SLOT(createNoteByTemplate(TemplateData)));
     connect(&dlg, SIGNAL(upgradeVipRequest()), SLOT(showVipUpgradePage()));
@@ -3197,8 +3197,8 @@ void WizMainWindow::on_category_itemSelectionChanged()
         return;
     quitSearchStatus();
     /*
-     * åœ¨ç‚¹å‡»MessageItemçš„æ—¶å€™,ä¸ºäº†é‡æ–°åˆ·æ–°å½“å‰æ¶ˆæ¯,å¼ºåˆ¶å‘é€äº†itemSelectionChangedæ¶ˆæ¯
-     * å› æ­¤éœ€è¦åœ¨è¿™ä¸ªåœ°æ–¹é¿å…é‡å¤åˆ·æ–°ä¸¤æ¬¡æ¶ˆæ¯åˆ—è¡¨
+     * ÔÚµã»÷MessageItemµÄÊ±ºò,ÎªÁËÖØÐÂË¢ÐÂµ±Ç°ÏûÏ¢,Ç¿ÖÆ·¢ËÍÁËitemSelectionChangedÏûÏ¢
+     * Òò´ËÐèÒªÔÚÕâ¸öµØ·½±ÜÃâÖØ¸´Ë¢ÐÂÁ½´ÎÏûÏ¢ÁÐ±í
      */
     if (!category->currentItem())
         return;
@@ -3877,7 +3877,7 @@ void WizMainWindow::startSearchStatus()
 
 void WizMainWindow::quitSearchStatus()
 {
-    // å¦‚æžœå½“å‰æ˜¯æœç´¢æ¨¡å¼ï¼Œåœ¨é€€å‡ºæœç´¢æ¨¡å¼æ—¶æ¸…é™¤æœç´¢æ¡†ä¸­çš„å†…å®¹
+    // Èç¹ûµ±Ç°ÊÇËÑË÷Ä£Ê½£¬ÔÚÍË³öËÑË÷Ä£Ê½Ê±Çå³ýËÑË÷¿òÖÐµÄÄÚÈÝ
     if (m_documents->acceptAllSearchItems())
     {
         m_searchWidget->clear();

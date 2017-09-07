@@ -1,4 +1,4 @@
-﻿#include "WizInitBizCertDialog.h"
+#include "WizInitBizCertDialog.h"
 #include "ui_WizInitBizCertDialog.h"
 #include "share/WizMessageBox.h"
 #include "sync/WizKMServer.h"

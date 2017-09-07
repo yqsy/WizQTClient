@@ -1,4 +1,4 @@
-﻿#ifndef WIZVERIFYACCOUNT_H
+#ifndef WIZVERIFYACCOUNT_H
 #define WIZVERIFYACCOUNT_H
 
 #include "wizapi.h"

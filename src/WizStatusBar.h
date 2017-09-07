@@ -1,4 +1,4 @@
-﻿#ifndef WIZSTATUSBAR_H
+#ifndef WIZSTATUSBAR_H
 #define WIZSTATUSBAR_H
 
 #include <QLabel>

@@ -1,4 +1,4 @@
-﻿#ifndef WIZSINGLEAPPLICATION_H
+#ifndef WIZSINGLEAPPLICATION_H
 #define WIZSINGLEAPPLICATION_H
 
 #include <QApplication>

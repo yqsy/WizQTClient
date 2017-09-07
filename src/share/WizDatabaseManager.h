@@ -1,4 +1,4 @@
-﻿#ifndef WIZDATABASEMANAGER_H
+#ifndef WIZDATABASEMANAGER_H
 #define WIZDATABASEMANAGER_H
 
 #include <QObject>

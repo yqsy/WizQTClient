@@ -1,4 +1,4 @@
-﻿#ifndef NOTIFY_H
+#ifndef NOTIFY_H
 #define NOTIFY_H
 
 #include <QtGlobal>

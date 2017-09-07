@@ -1,4 +1,4 @@
-ï»¿#include "WizDocumentWebView.h"
+#include "WizDocumentWebView.h"
 
 #include <QRunnable>
 #include <QList>
@@ -101,7 +101,7 @@ void WizDocumentWebViewPage::triggerAction(QWebEnginePage::WebAction typeAction,
         if (m_engineView->onPasteCommand())
             return;
     } else if (typeAction == QWebEnginePage::Undo || typeAction == QWebEnginePage::Redo) {
-        //FIXME: åœ¨QT5.4.2ä¹‹åæ— æ³•ç¦æ­¢webpageçš„å¿«æ·é”®ï¼Œwebpageçš„å¿«æ·é”®ä¼šè¦†ç›–menubarä¸Šçš„
+        //FIXME: ÔÚQT5.4.2Ö®ºóÎŞ·¨½ûÖ¹webpageµÄ¿ì½İ¼ü£¬webpageµÄ¿ì½İ¼ü»á¸²¸ÇmenubarÉÏµÄ
         Q_EMIT actionTriggered(typeAction);
         return;
     }
@@ -232,7 +232,7 @@ void WizDocumentWebView::inputMethodEvent(QInputMethodEvent* event)
 
 #ifdef Q_OS_MAC
     /*
-    ///æš‚æ—¶æ³¨é‡Šä»£ç ï¼Œç§»åŠ¨è¾“å…¥å…‰æ ‡ä¼šå¯¼è‡´æé«˜çš„CPUå ç”¨ç‡ï¼Œå¯¼è‡´è¾“å…¥å¡é¡¿ã€‚
+    ///ÔİÊ±×¢ÊÍ´úÂë£¬ÒÆ¶¯ÊäÈë¹â±ê»áµ¼ÖÂ¼«¸ßµÄCPUÕ¼ÓÃÂÊ£¬µ¼ÖÂÊäÈë¿¨¶Ù¡£
 
     //int nLength = 0;
     int nOffset = 0;
@@ -277,7 +277,7 @@ void WizDocumentWebView::keyPressEvent(QKeyEvent* event)
 //    {
 //        return;
 //    }
-    //FIXME: QT5.4.2ä¹‹åæ— æ³•è§¦å‘å…¨å±€çš„ä¿å­˜æŒ‰é’®
+    //FIXME: QT5.4.2Ö®ºóÎŞ·¨´¥·¢È«¾ÖµÄ±£´æ°´Å¥
     else if (event->key() == Qt::Key_V && event->modifiers() == Qt::ControlModifier)
     {
         WizGetAnalyzer().logAction("paste");
@@ -347,8 +347,8 @@ void WizDocumentWebView::focusOutEvent(QFocusEvent *event)
     }
     else if (m_ignoreActiveWindowEvent && event->reason() == Qt::ActiveWindowFocusReason)
     {
-        //NOTE:æ˜¾ç¤ºCWizTipsWidgetçš„æ—¶å€™ä¼šé€ æˆç¼–è¾‘å™¨å¤±å»ç„¦ç‚¹ï¼Œè¿›è€Œå¯¼è‡´toolbarå…³è”çš„tipsæ¶ˆå¤±ã€‚æ­¤å¤„é€šè¿‡
-        //å¿½ç•¥tipsæ˜¾ç¤ºæ—¶äº§ç”Ÿçš„ActiveWindowFocusReasonæ¥è¿›è¡Œtipsçš„æ˜¾ç¤º
+        //NOTE:ÏÔÊ¾CWizTipsWidgetµÄÊ±ºò»áÔì³É±à¼­Æ÷Ê§È¥½¹µã£¬½ø¶øµ¼ÖÂtoolbar¹ØÁªµÄtipsÏûÊ§¡£´Ë´¦Í¨¹ı
+        //ºöÂÔtipsÏÔÊ¾Ê±²úÉúµÄActiveWindowFocusReasonÀ´½øĞĞtipsµÄÏÔÊ¾
         return;
     }
 
@@ -400,8 +400,8 @@ void WizDocumentWebView::dragMoveEvent(QDragMoveEvent* event)
 
 void WizDocumentWebView::onActionTriggered(QWebEnginePage::WebAction act)
 {
-    //åœ¨QT5.4.2ä¹‹åwebpageä¼šè¦†ç›–menubarçš„å¿«æ·é”®ï¼Œä¸”æ— æ³•ç¦æ­¢ã€‚æŸäº›æ“ä½œéœ€è¦ç”±ç¼–è¾‘å™¨è¿›è¡Œæ“ä½œ(undo, redo)ï¼Œ
-   //éœ€è¦webpageå°†æ“ä½œåé¦ˆç»™webviewæ¥æ‰§è¡Œç¼–è¾‘å™¨æ“ä½œ
+    //ÔÚQT5.4.2Ö®ºówebpage»á¸²¸ÇmenubarµÄ¿ì½İ¼ü£¬ÇÒÎŞ·¨½ûÖ¹¡£Ä³Ğ©²Ù×÷ĞèÒªÓÉ±à¼­Æ÷½øĞĞ²Ù×÷(undo, redo)£¬
+   //ĞèÒªwebpage½«²Ù×÷·´À¡¸øwebviewÀ´Ö´ĞĞ±à¼­Æ÷²Ù×÷
     if (act == QWebEnginePage::Paste)
     {
         tryResetTitle();
@@ -463,7 +463,7 @@ void WizDocumentWebView::dropEvent(QDropEvent* event)
 //            QImageReader reader(strFileName);
             QFileInfo info(strFileName);
 
-            //FIXME: //TODO:  åº”è¯¥å’Œé™„ä»¶åˆ—è¡¨ä¸­çš„æ·»åŠ é™„ä»¶åˆå¹¶
+            //FIXME: //TODO:  Ó¦¸ÃºÍ¸½¼şÁĞ±íÖĞµÄÌí¼Ó¸½¼şºÏ²¢
             if (info.size() == 0)
             {
                 WizMessageBox::warning(nullptr , tr("Info"), tr("Can not add a 0 bit size file as attachment! File name : ' %1 '").arg(strFileName));
@@ -735,7 +735,7 @@ void WizDocumentWebView::on_insertCommentToNote_request(const QString& docGUID, 
         return;
     }
     //
-    //åº”è¯¥ä¼˜åŒ–ï¼Œå¯¹äºæ¨¡ç‰ˆç±»å‹çš„ç¬”è®°ï¼Œæ’å…¥ä½ç½®ä¸åº”è¯¥æ˜¯æœ€å‰é¢
+    //Ó¦¸ÃÓÅ»¯£¬¶ÔÓÚÄ£°æÀàĞÍµÄ±Ê¼Ç£¬²åÈëÎ»ÖÃ²»Ó¦¸ÃÊÇ×îÇ°Ãæ
     if (isEditing())
     {
         QString htmlBody = "<div>" + comment + "</div><hr>";
@@ -864,7 +864,7 @@ void WizDocumentWebView::getMailSender(std::function<void(QString)> callback)
 }
 
 ///*
-// * æ˜¯å¦æ·»åŠ ç”¨æˆ·è‡ªå®šä¹‰çš„æ ·å¼ï¼Œç›®å‰æœ‰å­—ä½“ç±»å‹ã€å­—ä½“å¤§å°ã€èƒŒæ™¯é¢œè‰²ç­‰ä¿¡æ¯ç­‰ä¿¡æ¯
+// * ÊÇ·ñÌí¼ÓÓÃ»§×Ô¶¨ÒåµÄÑùÊ½£¬Ä¿Ç°ÓĞ×ÖÌåÀàĞÍ¡¢×ÖÌå´óĞ¡¡¢±³¾°ÑÕÉ«µÈĞÅÏ¢µÈĞÅÏ¢
 // */
 //bool CWizDocumentWebView::shouldAddUserDefaultCSS()
 //{
@@ -1217,7 +1217,7 @@ void WizDocumentWebView::getAllEditorScriptAndStypeFileName(std::map<QString, QS
     //
     /*
      *
-     * æ¸å˜å¼åŠ è½½ç¬”è®°ï¼Œæš‚æ—¶ä¸éœ€è¦
+     * ½¥±äÊ½¼ÓÔØ±Ê¼Ç£¬ÔİÊ±²»ĞèÒª
     QString tempCss = strHtmlEditorPath + "tempeditorstyle.css";
     QString tempCssLoadOnly = strHtmlEditorPath + "tempeditorstyle_loadonly.css";
     //
@@ -2088,7 +2088,7 @@ bool WizDocumentWebView::checkListClickable()
 bool WizDocumentWebView::shouldAddCustomCSS()
 {
     const WIZDOCUMENTDATA& data = view()->note();
-    // é€šè¿‡ç½‘é¡µå‰ªè¾‘çš„ç¬”è®°ä¸æ·»åŠ è‡ªå®šä¹‰çš„æ ·å¼
+    // Í¨¹ıÍøÒ³¼ô¼­µÄ±Ê¼Ç²»Ìí¼Ó×Ô¶¨ÒåµÄÑùÊ½
     bool styledNote = data.strURL.startsWith("http");
     if (styledNote)
         return false;
@@ -2124,7 +2124,7 @@ bool WizDocumentWebView::canEditNote()
     return view()->isEditing();
 }
 
-//ç¼–è¾‘å™¨åˆå§‹åŒ–æ—¶ä½¿ç”¨
+//±à¼­Æ÷³õÊ¼»¯Ê±Ê¹ÓÃ
 QString WizDocumentWebView::getLocalLanguage()
 {
     QLocale locale;

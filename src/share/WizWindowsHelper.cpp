@@ -1,4 +1,4 @@
-﻿#include "WizWindowsHelper.h"
+#include "WizWindowsHelper.h"
 
 #ifdef Q_OS_WIN
 

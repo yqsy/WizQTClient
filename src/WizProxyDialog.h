@@ -1,4 +1,4 @@
-﻿#ifndef WIZPROXYDIALOG_H
+#ifndef WIZPROXYDIALOG_H
 #define WIZPROXYDIALOG_H
 
 #include <QDialog>

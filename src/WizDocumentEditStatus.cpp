@@ -1,4 +1,4 @@
-ï»¿#include "WizDocumentEditStatus.h"
+#include "WizDocumentEditStatus.h"
 #include "sync/WizApiEntry.h"
 #include "sync/WizToken.h"
 #include "share/WizMisc.h"
@@ -399,7 +399,7 @@ void WizDocumentStatusChecker::startCheck()
 
     if (m_networkError)
     {
-        //NOTE: ç½‘ç»œé”™è¯¯æ—¶ä¸ä¸€å®šä¼šå¯¼è‡´è¶…æ—¶ï¼Œæ­¤å¤„å‘é€è¶…æ—¶æ¶ˆæ¯è¿›è¡Œç¦»çº¿ç¼–è¾‘çš„æç¤º
+        //NOTE: ÍøÂç´íÎóÊ±²»Ò»¶¨»áµ¼ÖÂ³¬Ê±£¬´Ë´¦·¢ËÍ³¬Ê±ÏûÏ¢½øĞĞÀëÏß±à¼­µÄÌáÊ¾
         emit checkTimeOut(m_strCurGUID);
     }
     else

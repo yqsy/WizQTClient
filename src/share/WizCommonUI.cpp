@@ -1,4 +1,4 @@
-﻿#include "WizCommonUI.h"
+#include "WizCommonUI.h"
 
 #include <QClipboard>
 #include <QApplication>

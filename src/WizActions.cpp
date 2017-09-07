@@ -1,4 +1,4 @@
-﻿#include "WizActions.h"
+#include "WizActions.h"
 #include <QMenuBar>
 #include <QKeySequence>
 #include <QShortcut>

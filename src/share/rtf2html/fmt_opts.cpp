@@ -1,4 +1,4 @@
-﻿#include "fmt_opts.h"
+#include "fmt_opts.h"
 
 std::string formatting_options::get_par_str() const
 {

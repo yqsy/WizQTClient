@@ -1,4 +1,4 @@
-﻿#include "WizNoteInfoForm.h"
+#include "WizNoteInfoForm.h"
 #include "ui_WizNoteInfoForm.h"
 
 #include <QFile>

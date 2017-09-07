@@ -1,4 +1,4 @@
-﻿#include "WizUpdaterProgressDialog.h"
+#include "WizUpdaterProgressDialog.h"
 #include "ui_WizUpdaterProgressDialog.h"
 
 #include <QMouseEvent>

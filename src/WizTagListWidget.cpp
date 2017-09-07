@@ -1,4 +1,4 @@
-﻿#include "WizTagListWidget.h"
+#include "WizTagListWidget.h"
 
 #include <QLineEdit>
 #include <QListWidget>

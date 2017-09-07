@@ -1,4 +1,4 @@
-﻿#include "WizShareLinkDialog.h"
+#include "WizShareLinkDialog.h"
 #include "sync/WizToken.h"
 #include "utils/WizPathResolve.h"
 #include "utils/WizMisc.h"

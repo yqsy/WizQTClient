@@ -1,4 +1,4 @@
-﻿#ifndef WIZBUTTON_H
+#ifndef WIZBUTTON_H
 #define WIZBUTTON_H
 
 #include <QToolButton>

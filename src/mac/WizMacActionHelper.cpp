@@ -1,3 +1,3 @@
-﻿#include "WizMacActionHelper.h"
+#include "WizMacActionHelper.h"
 #include <QAction>
 

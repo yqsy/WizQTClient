@@ -1,4 +1,4 @@
-﻿#include "WizRequest.h"
+#include "WizRequest.h"
 #include "WizEventLoop.h"
 
 #include <QByteArray>

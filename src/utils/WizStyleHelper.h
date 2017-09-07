@@ -1,4 +1,4 @@
-﻿#ifndef UTILS_STYLEHELPER_H
+#ifndef UTILS_STYLEHELPER_H
 #define UTILS_STYLEHELPER_H
 
 #include <QVariant>

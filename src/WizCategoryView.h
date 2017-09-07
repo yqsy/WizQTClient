@@ -1,4 +1,4 @@
-ï»¿#ifndef WIZCATEGORYCTRL_H
+#ifndef WIZCATEGORYCTRL_H
 #define WIZCATEGORYCTRL_H
 
 #include <QPointer>
@@ -307,7 +307,7 @@ public:
 
     virtual void importFiles(QStringList& strFileList);
 
-    //TODO: å…¨éƒ¨ç§»åŠ¨åˆ°notemanageråŽ»å®žçŽ°
+    //TODO: È«²¿ÒÆ¶¯µ½notemanagerÈ¥ÊµÏÖ
     bool createDocument(WIZDOCUMENTDATA& data);
     bool createDocument(WIZDOCUMENTDATA& data, const QString& strHtml, const QString& strTitle);
     bool createDocumentByAttachments(WIZDOCUMENTDATA& data, const QStringList& attachList);

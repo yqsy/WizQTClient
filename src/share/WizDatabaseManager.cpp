@@ -1,4 +1,4 @@
-﻿#include "WizDatabaseManager.h"
+#include "WizDatabaseManager.h"
 
 #include <QDebug>
 

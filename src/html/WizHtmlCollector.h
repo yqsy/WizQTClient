@@ -1,4 +1,4 @@
-﻿#ifndef WIZHTMLCOLLECTOR_H
+#ifndef WIZHTMLCOLLECTOR_H
 #define WIZHTMLCOLLECTOR_H
 
 #include "WizHtmlReader.h"

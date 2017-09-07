@@ -1,4 +1,4 @@
-﻿#include "WizWin32Helper.h"
+#include "WizWin32Helper.h"
 
 #include <qglobal.h>
 

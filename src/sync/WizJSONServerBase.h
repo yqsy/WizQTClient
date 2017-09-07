@@ -1,4 +1,4 @@
-﻿#ifndef CWIZJSONSERVERBASE_H
+#ifndef CWIZJSONSERVERBASE_H
 #define CWIZJSONSERVERBASE_H
 
 #include <memory>

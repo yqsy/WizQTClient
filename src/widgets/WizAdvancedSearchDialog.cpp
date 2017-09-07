@@ -1,4 +1,4 @@
-﻿#include "WizAdvancedSearchDialog.h"
+#include "WizAdvancedSearchDialog.h"
 #include "ui_WizAdvancedSearchDialog.h"
 #include <QCursor>
 #include <QLineEdit>

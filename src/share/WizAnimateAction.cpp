@@ -1,4 +1,4 @@
-﻿#include "WizAnimateAction.h"
+#include "WizAnimateAction.h"
 
 #include "utils/WizStyleHelper.h"
 

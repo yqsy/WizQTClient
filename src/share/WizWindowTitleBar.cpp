@@ -1,4 +1,4 @@
-ï»¿#include "WizWindowTitleBar.h"
+#include "WizWindowTitleBar.h"
 
 #include <QPixmap>
 #include <QStyle>
@@ -18,14 +18,14 @@ WizWindowTitleBar::WizWindowTitleBar(QWidget *parent, QWidget* window, QWidget* 
     , m_oldContentsMargin(10, 10, 10, 10)
     , m_canResize(canResize)
 {
-    // ä¸ç»§æ‰¿çˆ¶ç»„ä»¶çš„èƒŒæ™¯è‰²
+    // ²»¼Ì³Ğ¸¸×é¼şµÄ±³¾°É«
     setAutoFillBackground(true);
 
     m_minimize = new QToolButton(this);
     m_maximize = new QToolButton(this);
     m_close = new QToolButton(this);
 
-    // è®¾ç½®æŒ‰é’®å›¾åƒçš„æ ·å¼
+    // ÉèÖÃ°´Å¥Í¼ÏñµÄÑùÊ½
     QString themeName = Utils::WizStyleHelper::themeName();
     QString strButtonClose = ::WizGetSkinResourceFileName(themeName, "linuxwindowclose");
     QString strButtonCloseOn = ::WizGetSkinResourceFileName(themeName, "linuxwindowclose_on");

@@ -1,4 +1,4 @@
-Ôªø//
+//
 //  RMAppReceipt.h
 //  RMStore
 //
@@ -26,7 +26,7 @@
  */
 @interface RMAppReceipt : NSObject
 
-/** The app‚Äôs bundle identifier. 
+/** The app°Øs bundle identifier. 
  
  This corresponds to the value of CFBundleIdentifier in the Info.plist file.
  */
@@ -37,7 +37,7 @@
  */
 @property (nonatomic, strong) NSData *bundleIdentifierData;
 
-/** The app‚Äôs version number. This corresponds to the value of CFBundleVersion (in iOS) or CFBundleShortVersionString (in OS X) in the Info.plist.
+/** The app°Øs version number. This corresponds to the value of CFBundleVersion (in iOS) or CFBundleShortVersionString (in OS X) in the Info.plist.
  */
 @property (nonatomic, strong) NSString *appVersion;
 
@@ -54,7 +54,7 @@
  */
 @property (nonatomic, strong) NSArray *inAppPurchases;
 
-/** The version of the app that was originally purchased. This corresponds to the value of CFBundleVersion (in iOS) or CFBundleShortVersionString (in OS X) in the Info.plist file when the purchase was originally made. In the sandbox environment, the value of this field is always ‚Äú1.0‚Äù.
+/** The version of the app that was originally purchased. This corresponds to the value of CFBundleVersion (in iOS) or CFBundleShortVersionString (in OS X) in the Info.plist file when the purchase was originally made. In the sandbox environment, the value of this field is always °∞1.0°±.
  */
 @property (nonatomic, strong) NSString *originalAppVersion;
 
@@ -108,28 +108,28 @@
  */
 @interface RMAppReceiptIAP : NSObject
 
-/** The number of items purchased. This value corresponds to the quantity property of the SKPayment object stored in the transaction‚Äôs payment property.
+/** The number of items purchased. This value corresponds to the quantity property of the SKPayment object stored in the transaction°Øs payment property.
  */
 @property (nonatomic) NSInteger quantity;
 
-/** The product identifier of the item that was purchased. This value corresponds to the productIdentifier property of the SKPayment object stored in the transaction‚Äôs payment property. 
+/** The product identifier of the item that was purchased. This value corresponds to the productIdentifier property of the SKPayment object stored in the transaction°Øs payment property. 
  */
 @property (nonatomic, strong) NSString *productIdentifier;
 
 /**
- The transaction identifier of the item that was purchased. This value corresponds to the transaction‚Äôs transactionIdentifier property.
+ The transaction identifier of the item that was purchased. This value corresponds to the transaction°Øs transactionIdentifier property.
  */
 @property (nonatomic, strong) NSString *transactionIdentifier;
 
 /** For a transaction that restores a previous transaction, the transaction identifier of the original transaction. Otherwise, identical to the transaction identifier. 
  
- This value corresponds to the original transaction‚Äôs transactionIdentifier property. 
+ This value corresponds to the original transaction°Øs transactionIdentifier property. 
  
  All receipts in a chain of renewals for an auto-renewable subscription have the same value for this field.
  */
 @property (nonatomic, strong) NSString *originalTransactionIdentifier;
 
-/** The date and time that the item was purchased. This value corresponds to the transaction‚Äôs transactionDate property. 
+/** The date and time that the item was purchased. This value corresponds to the transaction°Øs transactionDate property. 
  
  For a transaction that restores a previous transaction, the purchase date is the date of the restoration. Use `originalPurchaseDate` to get the date of the original transaction.
  
@@ -139,7 +139,7 @@
 
 /** For a transaction that restores a previous transaction, the date of the original transaction.
 
- This value corresponds to the original transaction‚Äôs transactionDate property.
+ This value corresponds to the original transaction°Øs transactionDate property.
  
  In an auto-renewable subscription receipt, this indicates the beginning of the subscription period, even if the subscription has been renewed.
  */

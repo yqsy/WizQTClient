@@ -1,4 +1,4 @@
-﻿#ifndef WIZINDEXBASE_H
+#ifndef WIZINDEXBASE_H
 #define WIZINDEXBASE_H
 
 #include <QObject>

@@ -1,4 +1,4 @@
-﻿#ifndef WIZIAPDIALOG_H
+#ifndef WIZIAPDIALOG_H
 #define WIZIAPDIALOG_H
 
 

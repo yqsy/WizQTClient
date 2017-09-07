@@ -1,4 +1,4 @@
-﻿#ifndef CWIZTAGBAR_H
+#ifndef CWIZTAGBAR_H
 #define CWIZTAGBAR_H
 
 #include <QWidget>

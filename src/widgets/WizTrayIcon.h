@@ -1,4 +1,4 @@
-﻿#ifndef CWIZTRAYICON_H
+#ifndef CWIZTRAYICON_H
 #define CWIZTRAYICON_H
 
 #include <QSystemTrayIcon>

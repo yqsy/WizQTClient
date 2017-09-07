@@ -1,4 +1,4 @@
-ï»¿#include "WizSettings.h"
+#include "WizSettings.h"
 #include "WizWebSettingsDialog.h"
 
 #include <algorithm>
@@ -2554,7 +2554,7 @@ QString GetParamFromWizKMURL(const QString& strURL, const QString& strParamName)
 QString WizStr2Title(const QString& str)
 {
     int idx = str.size() - 1;
-    static QString eol("ï¼Œã€‚ï¼Ÿ~!#$%^&*()_+{}|:\"<>?,./;'[]\\-=\n\r\t"); // end of line
+    static QString eol("£¬¡££¿~!#$%^&*()_+{}|:\"<>?,./;'[]\\-=\n\r\t"); // end of line
     foreach(QChar c, eol) {
         int i = str.indexOf(c, 0, Qt::CaseInsensitive);
         if (i != -1 && i < idx) {
@@ -2605,7 +2605,7 @@ bool WizCreateThumbnailForAttachment(QImage& img, const QString& attachFileName,
 
     if (isHighPix)
     {
-        // å¦‚æžœæ˜¯é«˜åˆ†è¾¨çŽ‡çš„å±å¹•ï¼Œåˆ™å°†åæ ‡æ”¾å¤§äºŒå€è¿›è¡Œç»˜åˆ¶ï¼Œä½¿ç”¨æ—¶è¿›è¡Œç¼©æ”¾ï¼Œå¦åˆ™ä¼šé€ æˆå›¾ç‰‡æ¨¡ç³Šã€‚
+        // Èç¹ûÊÇ¸ß·Ö±æÂÊµÄÆÁÄ»£¬Ôò½«×ø±ê·Å´ó¶þ±¶½øÐÐ»æÖÆ£¬Ê¹ÓÃÊ±½øÐÐËõ·Å£¬·ñÔò»áÔì³ÉÍ¼Æ¬Ä£ºý¡£
         Utils::WizStyleHelper::initPainterByDevice(&p);
     }
     QFileIconProvider ip;

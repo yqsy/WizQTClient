@@ -1,4 +1,4 @@
-﻿#include "WizLineInputDialog.h"
+#include "WizLineInputDialog.h"
 #include "ui_WizLineInputDialog.h"
 #include <QPushButton>
 

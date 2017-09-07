@@ -1,4 +1,4 @@
-﻿#ifndef WIZFOLDERVIEW_H
+#ifndef WIZFOLDERVIEW_H
 #define WIZFOLDERVIEW_H
 
 #include <QTreeWidget>

@@ -1,4 +1,4 @@
-ï»¿#include "WizTemplatePurchaseDialog.h"
+#include "WizTemplatePurchaseDialog.h"
 #include "ui_WizTemplatePurchaseDialog.h"
 
 #ifdef Q_OS_MAC
@@ -95,7 +95,7 @@ void WizTemplatePurchaseDialog::checkRecipt(const QByteArray& receipt, const QSt
     request.setHeader(QNetworkRequest::ContentTypeHeader, QVariant("application/x-www-form-urlencoded"));
     m_net->post(request, strExtInfo.toUtf8());
 
-    // å¼€å§‹å€’è®¡æ—¶ï¼Œå€’è®¡æ—¶ç»“æŸåˆ™è®¤ä¸ºå¤„ç†å¤±è´¥
+    // ¿ªÊ¼µ¹¼ÆÊ±£¬µ¹¼ÆÊ±½áÊøÔòÈÏÎª´¦ÀíÊ§°Ü
     m_waitingTimer.start(nWaitingTime);
 }
 

@@ -1,4 +1,4 @@
-ï»¿#include "WizShadowEffect.h"
+#include "WizShadowEffect.h"
 
 #include "WizUI.h"
 #include "utils/WizStyleHelper.h"
@@ -282,7 +282,7 @@ WizShadowWidget::WizShadowWidget(QWidget* parent, int shadowSize, bool canResize
 {
 
 #if 0
-    ////graphics effect æ•ˆçŽ‡å¤ªä½Žï¼Œç¦ç”¨////
+    ////graphics effect Ð§ÂÊÌ«µÍ£¬½ûÓÃ////
     WizCustomShadowEffect *bodyShadow = new WizCustomShadowEffect();
     bodyShadow->setBlurRadius(shadowSize);
     bodyShadow->setDistance(6.0);

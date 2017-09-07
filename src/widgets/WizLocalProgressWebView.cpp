@@ -1,4 +1,4 @@
-﻿#include "WizLocalProgressWebView.h"
+#include "WizLocalProgressWebView.h"
 #include <QMovie>
 #include <QWebEngineView>
 #include <QWebEngineSettings>

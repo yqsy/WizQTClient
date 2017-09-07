@@ -1,4 +1,4 @@
-ï»¿#include <QWebEngineView>
+#include <QWebEngineView>
 #include <QWebSocketServer>
 #include <QWebChannel>
 #include "WizWebEngineView.h"
@@ -95,9 +95,9 @@ void WizWebEnginePage::triggerAction(WizWebEnginePage::WebAction action, bool ch
     {
 #ifdef Q_OS_MAC
         //fix
-        //ä»webengineå¤åˆ¶çš„æ–‡å­—ï¼Œç²˜è´´åˆ°macçš„å¤‡å¿˜å½•çš„æ—¶å€™ï¼Œä¸­æ–‡ä¼šä¹±ç ã€‚
-        //webengineå¤åˆ¶åˆ°å‰ªè´´æ¿çš„çº¯æ–‡å­—æœ‰bugï¼Œç¼–ç æœ‰é—®é¢˜ã€‚å› æ­¤å»¶è¿Ÿç­‰åˆ°webengineå¤„ç†å®Œæˆåå†é‡æ–°ç²˜è´´çº¯æ–‡æœ¬
-        //é¿å…è¿™ä¸ªé”™è¯¯
+        //´Ówebengine¸´ÖÆµÄÎÄ×Ö£¬Õ³Ìùµ½macµÄ±¸ÍüÂ¼µÄÊ±ºò£¬ÖĞÎÄ»áÂÒÂë¡£
+        //webengine¸´ÖÆµ½¼ôÌù°åµÄ´¿ÎÄ×ÖÓĞbug£¬±àÂëÓĞÎÊÌâ¡£Òò´ËÑÓ³ÙµÈµ½webengine´¦ÀíÍê³ÉºóÔÙÖØĞÂÕ³Ìù´¿ÎÄ±¾
+        //±ÜÃâÕâ¸ö´íÎó
         //
         //
         QTimer::singleShot(500, [=]{

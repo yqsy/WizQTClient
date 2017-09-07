@@ -1,4 +1,4 @@
-﻿#ifndef CORE_ABOUTDIALOG_H
+#ifndef CORE_ABOUTDIALOG_H
 #define CORE_ABOUTDIALOG_H
 
 #include <QDialog>

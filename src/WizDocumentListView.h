@@ -1,4 +1,4 @@
-﻿#ifndef WIZDOCUMENTLISTVIEW_H
+#ifndef WIZDOCUMENTLISTVIEW_H
 #define WIZDOCUMENTLISTVIEW_H
 
 #include <QListWidget>

@@ -1,4 +1,4 @@
-﻿#ifndef WIZMAINWINDOW_H
+#ifndef WIZMAINWINDOW_H
 #define WIZMAINWINDOW_H
 
 #include <QtGlobal>

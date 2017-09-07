@@ -1,4 +1,4 @@
-﻿#ifndef WIZLOCKEDFILE_H
+#ifndef WIZLOCKEDFILE_H
 #define WIZLOCKEDFILE_H
 
 #include <QFile>

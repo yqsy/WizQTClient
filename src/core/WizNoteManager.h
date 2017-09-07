@@ -1,10 +1,10 @@
-﻿#ifndef CWIZNOTEMANAGER_H
+#ifndef CWIZNOTEMANAGER_H
 #define CWIZNOTEMANAGER_H
 
 #include "WizDef.h"
 
 /*
- * CWizNoteManager用于管理笔记相关的操作，例如创建、删除等。需要在程序启动时进行初始化
+ * CWizNoteManager���ڹ����ʼ���صĲ��������紴����ɾ���ȡ���Ҫ�ڳ�������ʱ���г�ʼ��
  */
 struct WIZDOCUMENTDATA;
 struct WIZTAGDATA;

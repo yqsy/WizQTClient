@@ -1,4 +1,4 @@
-﻿#include "WizQtHelper.h"
+#include "WizQtHelper.h"
 
 #include <QtCore>
 #include <QtGui>

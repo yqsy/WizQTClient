@@ -1,4 +1,4 @@
-﻿#ifndef WIZSHADOWEFFECT_H
+#ifndef WIZSHADOWEFFECT_H
 #define WIZSHADOWEFFECT_H
 
 #include <QGraphicsEffect>

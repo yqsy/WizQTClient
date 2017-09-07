@@ -1,4 +1,4 @@
-ï»¿#include "WizTitleEdit.h"
+#include "WizTitleEdit.h"
 
 #include <QCompleter>
 #include <QAbstractItemView>
@@ -56,8 +56,8 @@ void WizTitleEdit::keyPressEvent(QKeyEvent* e)
 
     QLineEdit::keyPressEvent(e);
 
-    // NOTE:ç›®å‰ä¸åœ¨keypressçš„æ—¶å€™å¤„ç†æç¤ºçš„é—®é¢˜ï¼ŒåŸå› æ˜¯ä¸­æ–‡è¾“å…¥æ³•ä¸ä¼šè§¦å‘keypressäº‹ä»¶ï¼Œ
-    //æ”¹ä¸ºåœ¨texteditäº‹ä»¶ä¸­å¤„ç†
+    // NOTE:Ä¿Ç°²»ÔÚkeypressµÄÊ±ºò´¦ÀíÌáÊ¾µÄÎÊÌâ£¬Ô­ÒòÊÇÖĞÎÄÊäÈë·¨²»»á´¥·¢keypressÊÂ¼ş£¬
+    //¸ÄÎªÔÚtexteditÊÂ¼şÖĞ´¦Àí
 //    if (!c)
 //        return;
 

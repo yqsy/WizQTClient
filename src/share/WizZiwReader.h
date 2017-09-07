@@ -1,4 +1,4 @@
-﻿#ifndef WIZZIWREADER_H
+#ifndef WIZZIWREADER_H
 #define WIZZIWREADER_H
 
 #include <QPointer>

@@ -1,4 +1,4 @@
-﻿#ifndef WIZSCREENSHOTWIDGET_H
+#ifndef WIZSCREENSHOTWIDGET_H
 #define WIZSCREENSHOTWIDGET_H
 
 #include <QWidget>

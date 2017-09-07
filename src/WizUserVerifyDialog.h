@@ -1,4 +1,4 @@
-﻿#ifndef WIZUSERVERIFYDIALOG_H
+#ifndef WIZUSERVERIFYDIALOG_H
 #define WIZUSERVERIFYDIALOG_H
 
 #include <QDialog>

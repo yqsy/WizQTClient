@@ -1,4 +1,4 @@
-ï»¿#include "WizFileImporter.h"
+#include "WizFileImporter.h"
 #include <QFile>
 #include <QFileInfo>
 #include <QDir>
@@ -176,7 +176,7 @@ bool WizFileImporter::importFile(const QString& strFile, const QString& strKbGUI
     }
     else if (containsImage)
     {
-        //ä¸ºäº†æå–å’Œfileè·¯å¾„ç›¸å…³è”çš„å›¾ç‰‡ï¼Œåœ¨åˆ›å»ºä¹‹åæ›´æ–°ç¬”è®°å†…å®¹
+        //ÎªÁËÌáÈ¡ºÍfileÂ·¾¶Ïà¹ØÁªµÄÍ¼Æ¬£¬ÔÚ´´½¨Ö®ºó¸üĞÂ±Ê¼ÇÄÚÈİ
         db.updateDocumentData(doc, strHtml, strFile, 0);
     }
 

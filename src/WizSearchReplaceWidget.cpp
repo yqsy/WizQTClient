@@ -1,4 +1,4 @@
-﻿#include "WizSearchReplaceWidget.h"
+#include "WizSearchReplaceWidget.h"
 #include "ui_WizSearchReplaceWidget.h"
 
 WizSearchReplaceWidget::WizSearchReplaceWidget(QWidget* parent) :

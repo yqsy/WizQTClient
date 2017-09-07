@@ -1,4 +1,4 @@
-ï»¿#include "WizMessageListView.h"
+#include "WizMessageListView.h"
 
 #include <QListWidgetItem>
 #include <QScrollBar>
@@ -157,13 +157,13 @@ public:
             QColor colorTitle("#3998d6");
 
             QRect rcBeforeTitle = Utils::WizStyleHelper::drawText(p, rcMsg, strBeforeTitle, 1, Qt::AlignVCenter, p->pen().color(), f, false);
-            if (strBeforeTitle.isEmpty() && rcBeforeTitle.height() < rcMsg.height())   //  ç¬¬ä¸€è¡Œæœ‰å‰©ä½™ç©ºé—´
+            if (strBeforeTitle.isEmpty() && rcBeforeTitle.height() < rcMsg.height())   //  µÚÒ»ÐÐÓÐÊ£Óà¿Õ¼ä
             {
                 QString strTitle(m_data.title);
                 QRect rcTitle1(rcMsg.adjusted(rcBeforeTitle.width() - Utils::WizStyleHelper::margin(), 0, 0, 0));
                 rcTitle1 = Utils::WizStyleHelper::drawText(p, rcTitle1, strTitle, 1, Qt::AlignVCenter, colorTitle, f, false);
 
-                if (!strTitle.isEmpty())        //ç»§ç»­ç»˜åˆ¶æ ‡é¢˜
+                if (!strTitle.isEmpty())        //¼ÌÐø»æÖÆ±êÌâ
                 {
                     QRect rcTitle2(rcMsg.adjusted(0, rcBeforeTitle.height(), 0, 0));
                     rcTitle2 = Utils::WizStyleHelper::drawText(p, rcTitle2, strTitle, 1, Qt::AlignVCenter, colorTitle, f);
@@ -173,7 +173,7 @@ public:
                         Utils::WizStyleHelper::drawText(p, rcAfterTitle, strAfterTitle, 1, Qt::AlignVCenter, colorSummary, f);
                     }
                 }
-                else if (rcTitle1.right() < rcMsg.right())   //åœ¨ç¬¬ä¸€è¡Œç»˜åˆ¶æ ‡é¢˜åŽå†…å®¹
+                else if (rcTitle1.right() < rcMsg.right())   //ÔÚµÚÒ»ÐÐ»æÖÆ±êÌâºóÄÚÈÝ
                 {
                     QRect rcAfterTitle1(rcMsg.adjusted(rcBeforeTitle.width() + rcTitle1.width()  - Utils::WizStyleHelper::margin() * 2, 0, 0, 0));
                     rcAfterTitle1 = Utils::WizStyleHelper::drawText(p, rcAfterTitle1, strAfterTitle, 1, Qt::AlignVCenter, colorSummary, f, false);
@@ -183,13 +183,13 @@ public:
                         rcLine2 = Utils::WizStyleHelper::drawText(p, rcLine2, strAfterTitle, 1, Qt::AlignVCenter, colorSummary, f);
                     }
                 }
-                else        //ç¬¬ä¸€è¡Œæ²¡å‰©ä½™ç©ºé—´ï¼Œåœ¨ç¬¬äºŒè¡Œç»˜åˆ¶æ ‡é¢˜åŽå†…å®¹
+                else        //µÚÒ»ÐÐÃ»Ê£Óà¿Õ¼ä£¬ÔÚµÚ¶þÐÐ»æÖÆ±êÌâºóÄÚÈÝ
                 {
                     QRect rcLine2(rcMsg.adjusted(0, rcTitle1.height(), 0, 0));
                     Utils::WizStyleHelper::drawText(p, rcLine2, strAfterTitle, 1, Qt::AlignVCenter, colorSummary, f);
                 }
             }
-            else                // ç¬¬ä¸€è¡Œæ²¡æœ‰å‰©ä½™ç©ºé—´
+            else                // µÚÒ»ÐÐÃ»ÓÐÊ£Óà¿Õ¼ä
             {
                 QRect rcBeforeTitle2(rcMsg.adjusted(0, rcBeforeTitle.height(), 0, 0));
                 rcBeforeTitle2 = Utils::WizStyleHelper::drawText(p, rcBeforeTitle2, strBeforeTitle, 1, Qt::AlignVCenter, colorSummary, f);
@@ -1175,7 +1175,7 @@ void WizMessageSelectorItemDelegate::paint(QPainter* painter, const QStyleOption
 //    QStyleOptionViewItem opt(option);
     QStyleOptionViewItem opt = option;
     initStyleOption(&opt, index);
-    //NOTE:QCombobox çš„é¡¹ç›®çš„èƒŒæ™¯cssé¢œè‰²æ ·å¼æ— æ•ˆï¼Œéœ€è¦é€šè¿‡ç»˜åˆ¶å®žçŽ°ã€‚
+    //NOTE:QCombobox µÄÏîÄ¿µÄ±³¾°cssÑÕÉ«ÑùÊ½ÎÞÐ§£¬ÐèÒªÍ¨¹ý»æÖÆÊµÏÖ¡£
     if (option.state & QStyle::State_Selected)
     {
         opt.palette.setColor(QPalette::Text, QColor(Qt::black));

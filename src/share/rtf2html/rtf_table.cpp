@@ -1,4 +1,4 @@
-﻿#include "rtf_table.h"
+#include "rtf_table.h"
 #include <set>
 #include <ostream>
 #include <iostream>

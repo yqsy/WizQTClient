@@ -1,4 +1,4 @@
-﻿#include "WizIAPDialog.h"
+#include "WizIAPDialog.h"
 #include "ui_WizIAPDialog.h"
 #include <QMessageBox>
 #include <QTextBrowser>

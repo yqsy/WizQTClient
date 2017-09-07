@@ -1,4 +1,4 @@
-﻿#include "WizTableSelector.h"
+#include "WizTableSelector.h"
 #include <QGridLayout>
 #include <QMenu>
 #include <QApplication>

@@ -1,4 +1,4 @@
-﻿#ifndef WIZSHADOWWINDOW_H
+#ifndef WIZSHADOWWINDOW_H
 #define WIZSHADOWWINDOW_H
 
 

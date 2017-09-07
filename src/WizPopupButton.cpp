@@ -1,4 +1,4 @@
-﻿#include "WizPopupButton.h"
+#include "WizPopupButton.h"
 
 #include <QMenu>
 

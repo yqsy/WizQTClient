@@ -1,4 +1,4 @@
-ï»¿#include "WizLoginDialog.h"
+#include "WizLoginDialog.h"
 #include "ui_WizLoginDialog.h"
 #include <QPainter>
 #include <QMouseEvent>
@@ -473,7 +473,7 @@ void WizLoginDialog::enableLoginControls(bool bEnable)
 
 void WizLoginDialog::enableSignUpControls(bool bEnable)
 {
-    //NOTE: å¾ˆå¥‡æ€ªçš„é—®é¢˜ï¼Œä¿®æ”¹ç¼–è¾‘æ¡†çš„çŠ¶æ€ä¼šå¯¼è‡´snsç™»å½•æŒ‰é’®è¢«è§¦å‘
+    //NOTE: ºÜÆæ¹ÖµÄÎÊÌâ£¬ĞŞ¸Ä±à¼­¿òµÄ×´Ì¬»áµ¼ÖÂsnsµÇÂ¼°´Å¥±»´¥·¢
 //    m_lineEditNewUserName->setEnabled(bEnable);
 //    m_lineEditNewPassword->setEnabled(bEnable);
 //    m_lineEditRepeatPassword->setEnabled(bEnable);
@@ -823,7 +823,7 @@ int WizLoginDialog::showAnimationWaitingDialog(const QString& text)
 {
     if (m_animationWaitingDialog)
     {
-        //NOTE:ä¿®å¤æŒ‰é’®æ ·å¼é—®é¢˜ï¼Œæ¯æ¬¡é‡æ–°åˆ›å»º
+        //NOTE:ĞŞ¸´°´Å¥ÑùÊ½ÎÊÌâ£¬Ã¿´ÎÖØĞÂ´´½¨
         delete m_animationWaitingDialog;
     }
     initAnimationWaitingDialog(text);
@@ -965,8 +965,8 @@ void WizLoginDialog::checkLocalUser(const QString& strAccountFolder, const QStri
     qDebug() << "do local account verify , folder path : " << strAccountFolder;
     WizUserSettings userSettings(strAccountFolder);
 
-    //  é¦–å…ˆåˆ¤æ–­ç”¨æˆ·çš„æœåŠ¡å™¨ç±»å‹ï¼Œå¦‚æœæ˜¯ä¹‹å‰ä½¿ç”¨è¿‡ä½†æ˜¯æ²¡æœ‰è®°å½•æœåŠ¡å™¨ç±»å‹ï¼Œåˆ™ä½¿ç”¨wizæœåŠ¡å™¨
-    //  å¦‚æœç™»å½•è¿‡ä¼ä¸šæœåŠ¡åˆ™éœ€è¦ç™»å½•åˆ°ä¼ä¸šæœåŠ¡å™¨
+    //  Ê×ÏÈÅĞ¶ÏÓÃ»§µÄ·şÎñÆ÷ÀàĞÍ£¬Èç¹ûÊÇÖ®Ç°Ê¹ÓÃ¹ıµ«ÊÇÃ»ÓĞ¼ÇÂ¼·şÎñÆ÷ÀàĞÍ£¬ÔòÊ¹ÓÃwiz·şÎñÆ÷
+    //  Èç¹ûµÇÂ¼¹ıÆóÒµ·şÎñÔòĞèÒªµÇÂ¼µ½ÆóÒµ·şÎñÆ÷
     if (EnterpriseServer == m_serverType)
     {
         if (serverIp().isEmpty())

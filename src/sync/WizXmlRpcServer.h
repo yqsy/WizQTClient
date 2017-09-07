@@ -1,4 +1,4 @@
-﻿#ifndef WIZXMLRPCSERVER_H
+#ifndef WIZXMLRPCSERVER_H
 #define WIZXMLRPCSERVER_H
 
 #include <QString>

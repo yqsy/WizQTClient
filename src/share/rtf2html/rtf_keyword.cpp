@@ -1,4 +1,4 @@
-﻿#include "rtf_keyword.h"
+#include "rtf_keyword.h"
 
 rtf_keyword::keyword_map::keyword_map() : base_class()
 {

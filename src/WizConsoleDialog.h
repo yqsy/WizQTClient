@@ -1,4 +1,4 @@
-﻿#ifndef WIZCONSOLEDIALOG_H
+#ifndef WIZCONSOLEDIALOG_H
 #define WIZCONSOLEDIALOG_H
 
 #include <QDialog>

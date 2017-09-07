@@ -1,4 +1,4 @@
-ï»¿#include "WizClucene.h"
+#include "WizClucene.h"
 
 #include "WizMisc.h"
 #ifdef _T
@@ -228,7 +228,7 @@ public:
 						c -= 0xFEE0;
 					}
 
-					////ä¸æ˜¯CJK////
+					////²»ÊÇCJK////
 					// if the current character is a letter or "_" "+" "#"
                     if (iswalnum(c) || ((c == '_') || (c == '+') || (c == '#')) ) {
 						if (length == 0) {
@@ -809,7 +809,7 @@ void _testCJK(const char* astr, bool ignoreSurrogates = true)
 
 void testCJK()
 {
-    const wchar_t* szTest = L"flashæœ¬åœ°æ‘„åƒå¤´å½•åƒè‡ªåŠ¨ä¸Šä¼ ä¿å­˜åˆ°æœåŠ¡å™¨";
+    const wchar_t* szTest = L"flash±¾µØÉãÏñÍ·Â¼Ïñ×Ô¶¯ÉÏ´«±£´æµ½·şÎñÆ÷";
     char szBuffer[1024] = {0};
     wcstombs(szBuffer, szTest, 1024);
 	_testCJK(szBuffer);

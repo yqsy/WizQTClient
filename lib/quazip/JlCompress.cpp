@@ -194,7 +194,7 @@ bool JlCompress::extractFile(QuaZip* zip, QString fileName, QString fileDest) {
         return false;
     }
 
-    //æŸäº›zipæ–‡ä»¶é‡Œé¢æƒé™å¯èƒ½æ¯”è¾ƒä½ï¼Œä¼šå¯¼è‡´å‡ºç°é—®é¢˜
+    //Ä³Ğ©zipÎÄ¼şÀïÃæÈ¨ÏŞ¿ÉÄÜ±È½ÏµÍ£¬»áµ¼ÖÂ³öÏÖÎÊÌâ
     return true;
     //return outFile.setPermissions(info.getPermissions());
 }
