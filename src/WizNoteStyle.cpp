@@ -123,6 +123,8 @@ CWizNoteStyle::CWizNoteStyle(const QString& strSkinName)
 void CWizNoteStyle::drawCategoryViewItem(const QStyleOptionViewItem *vopt,
                                          QPainter *p, const WizCategoryBaseView *view) const
 {
+    
+    // 画拖动目的地的方框的
     if (view->isDragHovered() && view->validateDropDestination(view->dragHoveredPos())) {
         QRect rect = view->visualItemRect(view->itemAt(view->dragHoveredPos()));
         p->setRenderHint(QPainter::Antialiasing, true);
@@ -138,7 +140,10 @@ void CWizNoteStyle::drawCategoryViewItem(const QStyleOptionViewItem *vopt,
     }
 
     p->save();
+
+    // 画左侧树形展示区域的
     view->categoryItemFromIndex(vopt->index)->drawItemBody(p, vopt);
+    
     view->categoryItemFromIndex(vopt->index)->drawExtraBadge(p, vopt);
     p->restore();
 

@@ -77,6 +77,7 @@ protected:
     // 拖动的事件
     virtual void startDrag(Qt::DropActions supportedActions);
     virtual void dragEnterEvent(QDragEnterEvent* event);
+    
     virtual void dragMoveEvent(QDragMoveEvent* event);
     virtual void dragLeaveEvent(QDragLeaveEvent* event);
     virtual void dropEvent(QDropEvent* event);
