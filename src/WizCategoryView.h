@@ -54,8 +54,12 @@ public:
     WizCategoryViewItemBase* categoryItemFromIndex(const QModelIndex &index) const;
 
     bool isDragHovered() const { return m_bDragHovered; }
+    
+    // 在QStyle内使用到,画矩形
     QPoint dragHoveredPos() const { return m_dragHoveredPos; }
     bool validateDropDestination(const QPoint& p) const;
+    
+    
     Qt::ItemFlags dragItemFlags() const;
 
     bool isCursorEntered() const { return m_cursorEntered; }
@@ -63,9 +67,14 @@ public:
     QPoint hitPoint() const { return m_hitPos; }
 
 protected:
+    
+    // 鼠标的事件
     virtual void mousePressEvent(QMouseEvent* event);
     virtual void mouseReleaseEvent(QMouseEvent* event);
     virtual void mouseMoveEvent(QMouseEvent* event);
+    
+    
+    // 拖动的事件
     virtual void startDrag(Qt::DropActions supportedActions);
     virtual void dragEnterEvent(QDragEnterEvent* event);
     virtual void dragMoveEvent(QDragMoveEvent* event);
@@ -78,11 +87,16 @@ protected:
     QAbstractItemView::DropIndicatorPosition position(const QPoint &pos, const QRect &rect, const QModelIndex &index) const;
 
 
-
+    // 鼠标移到
     virtual void enterEvent(QEvent * event);
+    
+    // 鼠标没移到
     virtual void leaveEvent(QEvent * event);
 
+    // 修改大小
     virtual void resizeEvent(QResizeEvent* event);
+    
+    
     virtual void contextMenuEvent(QContextMenuEvent* e);
 
     virtual QModelIndex moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers);
