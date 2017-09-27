@@ -801,7 +801,7 @@ void WizLoginDialog::initAnimationWaitingDialog(const QString& text)
     m_animationWaitingDialog->setAutoFillBackground(true);
     m_animationWaitingDialog->setWindowOpacity(0.7);
 
-    QHBoxLayout* closeLayout = new QHBoxLayout();
+    
     QToolButton* closeButton = new QToolButton(m_animationWaitingDialog);
     QString strBtnCloseNormal = Utils::WizStyleHelper::skinResourceFileName("linuxlogindialoclose_white");
     QString strBtnCloseHover = Utils::WizStyleHelper::skinResourceFileName("linuxwindowclose_on");
@@ -810,6 +810,8 @@ void WizLoginDialog::initAnimationWaitingDialog(const QString& text)
                                                      "QToolButton:hover{ image:url(%2); height: 16px; width: 16px;}"
                                                      "QToolButton:pressed{ image:url(%3); height: 16px; width: 16px;}")
                                              .arg(strBtnCloseNormal).arg(strBtnCloseHover).arg(strBtnCloseDown));
+    
+    QHBoxLayout* closeLayout = new QHBoxLayout();
     closeLayout->setContentsMargins(0, 0, 0, 0);
     closeLayout->addStretch();
     closeLayout->addWidget(closeButton);
@@ -820,21 +822,25 @@ void WizLoginDialog::initAnimationWaitingDialog(const QString& text)
     QMovie* movie =new QMovie(m_animationWaitingDialog);
     movie->setFileName(":/searching.gif");
     labelSearching->setMovie(movie);
+    
     QHBoxLayout* labelLayout = new QHBoxLayout();
     labelLayout->setContentsMargins(0, 0, 0, 0);
     labelLayout->addStretch();
     labelLayout->addWidget(labelSearching);
     labelLayout->addStretch();
-    QHBoxLayout* textLayout = new QHBoxLayout();
-    textLayout->setContentsMargins(0, 5, 0, 0);
-    textLayout->addStretch();
+    
     QLabel* labelText = new QLabel(m_animationWaitingDialog);
     labelText->setText(text);
     QPalette plText = labelText->palette();
     plText.setColor(QPalette::WindowText, QColor(255, 255, 255, 200));
     labelText->setPalette(plText);
+    
+    QHBoxLayout* textLayout = new QHBoxLayout();
+    textLayout->setContentsMargins(0, 5, 0, 0);
+    textLayout->addStretch();
     textLayout->addWidget(labelText);
     textLayout->addStretch();
+    
     QVBoxLayout* layout = new QVBoxLayout();
     layout->setContentsMargins(0, 0, 0, 15);
     layout->addLayout(closeLayout);
